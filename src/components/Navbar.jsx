@@ -1,74 +1,112 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTransition } from '../context/TransitionContext';
-import Magnetic from './Magnetic';
 
-export default function Navbar({ isMenuOpen, setIsMenuOpen }) {
-  const location = useLocation();
+export default function Navbar({ onToggleMenu }) {
   const { navigateTo } = useTransition();
+  const location = useLocation();
+  const path = location.pathname.toLowerCase();
 
-  const handleNavClick = (path, label) => {
-    setIsMenuOpen(false);
-    navigateTo(path, label);
-  };
+  // Home and Contact have dark headers, while Work and About have light headers
+  const isDark = path === '/' || path === '/index.html' || path.includes('contact');
+
+  const isWork = path.includes('work');
+  const isAbout = path.includes('about');
+  const isContact = path.includes('contact');
 
   return (
     <>
-      <header className="nav-bar">
-        <div className="credits-top">
-          <Magnetic strength={0.25}>
-            <div
-              className="author-link"
-              onClick={() => handleNavClick('/', 'Home')}
-              role="button"
-              tabIndex={0}
-            >
-              <span className="credit">©</span>
-              <span>Code by <strong>Aadarsh Rai</strong></span>
-            </div>
-          </Magnetic>
+      <div className="btn btn-hamburger" onClick={onToggleMenu}>
+        <div className="btn-click magnetic" data-strength="25" data-strength-text="15">
+          <div className="btn-fill"></div>
+          <div className="btn-text">
+            <div className="btn-bars"></div>
+            <span className="btn-text-inner">Menu</span>
+          </div>
         </div>
+      </div>
 
-        <nav className="nav-bar-links">
-          <Magnetic strength={0.3}>
-            <button
-              className={`nav-item ${location.pathname === '/work' ? 'active' : ''}`}
-              onClick={() => handleNavClick('/work', 'Work')}
+      <div className={`nav-bar ${isDark ? 'theme-dark' : ''}`}>
+        <div className="credits-top">
+          <div className="btn btn-link btn-left-top">
+            <a
+              href="/"
+              onClick={(e) => {
+                e.preventDefault();
+                navigateTo('/', 'Home');
+              }}
+              className="btn-click magnetic"
+              data-strength="20"
+              data-strength-text="10"
             >
-              Work
-            </button>
-          </Magnetic>
-          <Magnetic strength={0.3}>
-            <button
-              className={`nav-item ${location.pathname === '/about' ? 'active' : ''}`}
-              onClick={() => handleNavClick('/about', 'About')}
+              <span className="btn-text">
+                <div className="credit"><span>©</span></div>
+                <div className="cbd">
+                  <span className="code-by">Code by </span>
+                  <span className="author">Aadarsh</span>
+                  <span className="author-last"> Rai</span>
+                </div>
+              </span>
+            </a>
+          </div>
+        </div>
+        <ul className="links-wrap">
+          <li className={`btn btn-link ${isWork ? 'active' : ''}`}>
+            <a
+              href="/work"
+              onClick={(e) => {
+                e.preventDefault();
+                navigateTo('/work', 'Work');
+              }}
+              className="btn-click magnetic"
+              data-strength="20"
+              data-strength-text="10"
             >
-              About
-            </button>
-          </Magnetic>
-          <Magnetic strength={0.3}>
-            <button
-              className={`nav-item ${location.pathname === '/contact' ? 'active' : ''}`}
-              onClick={() => handleNavClick('/contact', 'Contact')}
+              <span className="btn-text">
+                <span className="btn-text-inner">Work</span>
+              </span>
+            </a>
+          </li>
+          <li className={`btn btn-link ${isAbout ? 'active' : ''}`}>
+            <a
+              href="/about"
+              onClick={(e) => {
+                e.preventDefault();
+                navigateTo('/about', 'About');
+              }}
+              className="btn-click magnetic"
+              data-strength="20"
+              data-strength-text="10"
             >
-              Contact
-            </button>
-          </Magnetic>
-        </nav>
-      </header>
-
-      {/* Floating Hamburger Button */}
-      <div className={`btn-hamburger ${isMenuOpen ? 'is-open' : ''}`}>
-        <Magnetic strength={0.4}>
-          <button
-            className="hamburger-circle"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label={isMenuOpen ? 'Close Menu' : 'Open Menu'}
-          >
-            <span className="hamburger-line"></span>
-            <span className="hamburger-line"></span>
-          </button>
-        </Magnetic>
+              <span className="btn-text">
+                <span className="btn-text-inner">About</span>
+              </span>
+            </a>
+          </li>
+          <li className={`btn btn-link ${isContact ? 'active' : ''}`}>
+            <a
+              href="/contact"
+              onClick={(e) => {
+                e.preventDefault();
+                navigateTo('/contact', 'Contact');
+              }}
+              className="btn-click magnetic"
+              data-strength="20"
+              data-strength-text="10"
+            >
+              <span className="btn-text">
+                <span className="btn-text-inner">Contact</span>
+              </span>
+            </a>
+          </li>
+          <li className="btn btn-link btn-menu" onClick={onToggleMenu}>
+            <div className="btn-click magnetic" data-strength="20" data-strength-text="10">
+              <div className="btn-text">
+                <span className="btn-text-inner">Menu</span>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </>
   );

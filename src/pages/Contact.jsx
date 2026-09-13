@@ -1,183 +1,201 @@
 import React, { useState } from 'react';
-import Magnetic from '../components/Magnetic';
-import { Send, CheckCircle2 } from 'lucide-react';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    organization: '',
-    message: ''
-  });
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.email) return;
-
-    // Simulate clean submission
-    setIsSubmitted(true);
+    setSubmitted(true);
     setTimeout(() => {
-      setFormData({ name: '', email: '', organization: '', message: '' });
-      setIsSubmitted(false);
-    }, 4500);
-  };
-
-  const handleChange = (e) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
+      e.target.reset();
+      setSubmitted(false);
+    }, 4000);
   };
 
   return (
-    <main className="main-content" style={{ paddingTop: 'clamp(100px, 16vh, 160px)', minHeight: '100vh' }}>
-      <div className="container">
-        {/* Header */}
-        <div style={{ marginBottom: 'clamp(3rem, 6vh, 5rem)' }}>
-          <h1 className="hero-title" style={{ fontSize: 'clamp(2.5rem, 7vw, 6.5rem)', marginBottom: '1.5rem' }}>
-            Contact
-          </h1>
-          <p style={{ maxWidth: '640px', fontSize: 'clamp(1.1rem, 1.6vw, 1.35rem)', color: 'var(--color-text-muted)', lineHeight: 1.6 }}>
-            Have a project in mind, an inquiry, or just want to connect? Let's start the conversation.
-          </p>
-        </div>
-
-        {/* Form + Details Grid */}
-        <div className="contact-layout" style={{ marginBottom: '6rem' }}>
-          {/* Form */}
-          <div>
-            {isSubmitted ? (
-              <div
-                style={{
-                  background: 'var(--color-surface)',
-                  border: '1px solid var(--color-border)',
-                  borderRadius: '16px',
-                  padding: '3rem 2rem',
-                  textAlign: 'center',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  gap: '1rem'
-                }}
-              >
-                <CheckCircle2 size={48} color="#10b981" />
-                <h3 style={{ fontSize: '1.75rem', fontWeight: 400 }}>Thank you for reaching out!</h3>
-                <p style={{ color: 'var(--color-text-muted)', maxWidth: '420px' }}>
-                  Your message has been received. I typically respond within 24 hours.
-                </p>
+    <div className="main-wrap" id="contact">
+      <header className="section default-header contact-header theme-dark">
+        <div className="container medium">
+          <div className="row once-in">
+            <div className="flex-col">
+              <h1>
+                <span>
+                  <div className="profile-picture"></div> Let's start a{' '}
+                </span>
+                <span>project together</span>
+              </h1>
+            </div>
+            <div className="flex-col">
+              <div className="profile-picture"></div>
+              <div className="arrow">
+                <svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <title>arrow-down-right</title>
+                  <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                    <g transform="translate(-1019.000000, -279.000000)" stroke="#FFFFFF" strokeWidth="1.5">
+                      <g transform="translate(1026.000000, 286.000000) rotate(90.000000) translate(-1026.000000, -286.000000) translate(1020.000000, 280.000000)">
+                        <polyline points="2.76923077 0 12 0 12 9.23076923"></polyline>
+                        <line x1="12" y1="0" x2="0" y2="12"></line>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
               </div>
-            ) : (
-              <form className="contact-form" onSubmit={handleSubmit}>
-                <div className="form-group">
-                  <label htmlFor="name" className="form-label">01 / What's your name?</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    placeholder="John Doe *"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
+            </div>
+          </div>
+          <div className="row once-in">
+            <div className="flex-col">
+              <form className="form" id="contact-form" onSubmit={handleSubmit}>
+                <div className="website-field" style={{ display: 'none' }}>
+                  <label className="label" htmlFor="form-tel">Phone Number</label>
+                  <input className="field" type="text" id="form-tel" name="tel" tabIndex={-1} />
                 </div>
-
-                <div className="form-group">
-                  <label htmlFor="email" className="form-label">02 / What's your email?</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    placeholder="john@example.com *"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
+                <div className="form-col">
+                  <h5>01</h5>
+                  <label className="label" htmlFor="form-name">What's your name?</label>
+                  <input className="field" type="text" id="form-name" name="name" required placeholder="John Doe *" />
                 </div>
-
-                <div className="form-group">
-                  <label htmlFor="organization" className="form-label">03 / What's your company or brand?</label>
-                  <input
-                    type="text"
-                    id="organization"
-                    name="organization"
-                    placeholder="Company or Studio Ltd."
-                    value={formData.organization}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
+                <div className="form-col">
+                  <h5>02</h5>
+                  <label className="label" htmlFor="form-email">What's your email?</label>
+                  <input className="field" type="email" id="form-email" name="email" required placeholder="john@doe.com *" />
                 </div>
-
-                <div className="form-group">
-                  <label htmlFor="message" className="form-label">04 / Tell me about your project</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    placeholder="Hello Aadarsh, I would like to discuss..."
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="form-textarea"
-                  />
+                <div className="form-col">
+                  <h5>03</h5>
+                  <label className="label" htmlFor="form-company">What's the name of your organization?</label>
+                  <input className="field" type="text" id="form-company" name="company" placeholder="John &amp; Doe ®" />
                 </div>
-
-                <div style={{ marginTop: '1rem' }}>
-                  <Magnetic strength={0.35}>
-                    <button type="submit" className="btn-click primary">
+                <div className="form-col">
+                  <h5>04</h5>
+                  <label className="label" htmlFor="form-service">What services are you looking for?</label>
+                  <input className="field" type="text" id="form-service" name="service" placeholder="Web Design, Web Development ..." />
+                </div>
+                <div className="form-col">
+                  <h5>05</h5>
+                  <label className="label" htmlFor="form-message">Your message</label>
+                  <textarea className="field" id="form-message" name="message" rows="8" required placeholder="Hello Aadarsh, can you help me with ... *"></textarea>
+                </div>
+                <div className="btn-contact-send">
+                  <div className="btn btn-round" data-scroll data-scroll-speed="2">
+                    <div className="btn-click magnetic" data-strength="100" data-strength-text="50">
+                      <div className="btn-fill"></div>
                       <span className="btn-text">
-                        <span>Send Message</span>
-                        <Send size={16} />
+                        <span className="btn-text-inner">{submitted ? 'Sent!' : 'Send it!'}</span>
                       </span>
-                    </button>
-                  </Magnetic>
+                      <input type="submit" name="submit" value="" className="form-btn" />
+                    </div>
+                  </div>
                 </div>
               </form>
-            )}
+            </div>
+            <div className="flex-col">
+              <h5>Contact Details</h5>
+              <ul className="links-wrap">
+                <li className="btn btn-link btn-link-external">
+                  <a href="mailto:aadarshrai1801@gmail.com" className="btn-click magnetic" data-strength="20" data-strength-text="10">
+                    <span className="btn-text">
+                      <span className="btn-text-inner">aadarshrai1801@gmail.com</span>
+                    </span>
+                  </a>
+                </li>
+                <li className="btn btn-link btn-link-external">
+                  <a href="tel:+918434501384" className="btn-click magnetic" data-strength="20" data-strength-text="10">
+                    <span className="btn-text">
+                      <span className="btn-text-inner">+91 8434501384</span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+              <h5>Business Details</h5>
+              <ul className="links-wrap">
+                <li><p>Aadarsh Rai</p></li>
+                <li><p>Location: Dubai, UAE</p></li>
+              </ul>
+              <h5>Socials</h5>
+              <ul className="links-wrap">
+                <li className="btn btn-link btn-link-external">
+                  <a href="https://www.linkedin.com/in/aadarshrai1801/" target="_blank" rel="noopener noreferrer" className="btn-click magnetic" data-strength="20" data-strength-text="10">
+                    <span className="btn-text">
+                      <span className="btn-text-inner">LinkedIn</span>
+                    </span>
+                  </a>
+                </li>
+                <li className="btn btn-link btn-link-external">
+                  <a href="https://github.com/Aadarshrai1801" target="_blank" rel="noopener noreferrer" className="btn-click magnetic" data-strength="20" data-strength-text="10">
+                    <span className="btn-text">
+                      <span className="btn-text-inner">GitHub</span>
+                    </span>
+                  </a>
+                </li>
+                <li className="btn btn-link btn-link-external">
+                  <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="btn-click magnetic" data-strength="20" data-strength-text="10">
+                    <span className="btn-text">
+                      <span className="btn-text-inner">Twitter</span>
+                    </span>
+                  </a>
+                </li>
+                <li className="btn btn-link btn-link-external">
+                  <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="btn-click magnetic" data-strength="20" data-strength-text="10">
+                    <span className="btn-text">
+                      <span className="btn-text-inner">Instagram</span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-
-          {/* Direct Details */}
-          <div className="contact-direct-info">
-            <div className="info-block">
-              <h5>Direct Contact</h5>
-              <p>
-                <a href="mailto:aadarshrai1801@gmail.com">
-                  aadarshrai1801@gmail.com
-                </a>
-              </p>
+        </div>
+      </header>
+      <footer className="section footer footer-contact theme-dark">
+        <div className="container no-padding">
+          <div className="row bottom-footer">
+            <div className="flex-col">
+              <div className="credits">
+                <h5>Version</h5>
+                <p>2026 © Edition</p>
+              </div>
+              <div className="time">
+                <h5>Local time</h5>
+                <p><span id="timeSpan">--:-- GST</span></p>
+              </div>
             </div>
-
-            <div className="info-block">
-              <h5>Location</h5>
-              <p>Dubai, United Arab Emirates</p>
-              <p style={{ color: 'var(--color-text-subtle)', fontSize: '0.95rem', marginTop: '0.25rem' }}>
-                GMT+4 • Available Worldwide
-              </p>
-            </div>
-
-            <div className="info-block">
-              <h5>Social Profiles</h5>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginTop: '0.5rem' }}>
-                <a
-                  href="https://www.linkedin.com/in/aadarshrai1801/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  LinkedIn ↗
-                </a>
-                <a
-                  href="https://github.com/Aadarshrai1801"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub ↗
-                </a>
+            <div className="flex-col">
+              <div className="socials">
+                <h5>Socials</h5>
+                <ul>
+                  <li className="btn btn-link btn-link-external">
+                    <a href="https://www.linkedin.com/in/aadarshrai1801/" target="_blank" rel="noopener noreferrer" className="btn-click magnetic" data-strength="20" data-strength-text="10">
+                      <span className="btn-text">
+                        <span className="btn-text-inner">LinkedIn</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li className="btn btn-link btn-link-external">
+                    <a href="https://github.com/Aadarshrai1801" target="_blank" rel="noopener noreferrer" className="btn-click magnetic" data-strength="20" data-strength-text="10">
+                      <span className="btn-text">
+                        <span className="btn-text-inner">GitHub</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li className="btn btn-link btn-link-external">
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="btn-click magnetic" data-strength="20" data-strength-text="10">
+                      <span className="btn-text">
+                        <span className="btn-text-inner">Twitter</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li className="btn btn-link btn-link-external">
+                    <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="btn-click magnetic" data-strength="20" data-strength-text="10">
+                      <span className="btn-text">
+                        <span className="btn-text-inner">Instagram</span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </main>
+      </footer>
+    </div>
   );
 }

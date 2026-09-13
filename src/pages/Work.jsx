@@ -1,152 +1,309 @@
 import React, { useState } from 'react';
-import { PROJECTS } from '../data/projects';
-import { ArrowUpRight, ExternalLink, Github } from 'lucide-react';
-import Magnetic from '../components/Magnetic';
 
 export default function Work() {
-  const [activeFilter, setActiveFilter] = useState('All');
+  const [filter, setFilter] = useState('all');
+  const [viewMode, setViewMode] = useState('columns'); // 'columns' or 'rows'
 
-  const categories = ['All', 'Design', 'Development', 'AI'];
+  const projects = [
+    {
+      id: 'marketpulse',
+      title: 'MarketPulse',
+      category: ['development', 'design', 'interaction'],
+      location: 'Dubai, UAE',
+      services: 'Data Engineering & AI',
+      year: '2026',
+      sub: 'Supermarket price intelligence',
+      tags: 'Python · MongoDB',
+      link: 'https://github.com/Aadarshrai1801/BazaarPulse',
+      svg: '/assets/work-marketpulse.svg',
+      bgColor: '#0B1220'
+    },
+    {
+      id: 'plantix',
+      title: 'Plantix',
+      category: ['development', 'interaction'],
+      location: 'India',
+      services: 'Computer Vision & Deep Learning',
+      year: '2026',
+      sub: 'Plant disease detection',
+      tags: 'TensorFlow',
+      link: 'https://github.com/Aadarshrai1801/Plantix',
+      svg: '/assets/work-plantix.svg',
+      bgColor: '#06281A'
+    },
+    {
+      id: 'intellicast',
+      title: 'IntelliCast',
+      category: ['development', 'interaction'],
+      location: 'Dubai, UAE',
+      services: 'Medical AI & LLM RAG',
+      year: '2026',
+      sub: 'Medical AI assistant',
+      tags: 'Python · LLM',
+      link: 'https://github.com/Aadarshrai1801/Intellicast',
+      svg: '/assets/work-intellicast.svg',
+      bgColor: '#17102E'
+    },
+    {
+      id: 'quickshow',
+      title: 'QuickShow',
+      category: ['development', 'design'],
+      location: 'India',
+      services: 'Full-Stack Web App',
+      year: '2024',
+      sub: 'Movie ticket booking',
+      tags: 'React · Node.js',
+      link: 'https://github.com/Aadarshrai1801/QuickShow',
+      svg: '/assets/work-quickshow.svg',
+      bgColor: '#2A0A12'
+    }
+  ];
 
-  const filteredProjects = PROJECTS.filter((p) => {
-    if (activeFilter === 'All') return true;
-    if (activeFilter === 'Design') return p.category.includes('Design') || p.service.includes('Design');
-    if (activeFilter === 'Development') return p.category.includes('Development') || p.tags.includes('React');
-    if (activeFilter === 'AI') return p.category.includes('AI') || p.tags.includes('AI Analytics');
-    return true;
+  const filteredProjects = projects.filter((p) => {
+    if (filter === 'all') return true;
+    return p.category.includes(filter);
   });
 
   return (
-    <main className="main-content" style={{ paddingTop: 'clamp(100px, 16vh, 160px)', minHeight: '100vh' }}>
-      <div className="container">
-        {/* Header */}
-        <div style={{ marginBottom: 'clamp(3rem, 6vh, 5rem)' }}>
-          <h1 className="hero-title" style={{ fontSize: 'clamp(2.5rem, 7vw, 6.5rem)', marginBottom: '1.5rem' }}>
-            Work
-          </h1>
-          <p style={{ maxWidth: '640px', fontSize: 'clamp(1.1rem, 1.6vw, 1.35rem)', color: 'var(--color-text-muted)', lineHeight: 1.6 }}>
-            A curated showcase of interactive digital experiences, scalable web applications, and thoughtful design systems.
-          </p>
-        </div>
-
-        {/* Filter Pills */}
-        <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: 'clamp(2.5rem, 5vh, 4rem)', borderBottom: '1px solid var(--color-border)', paddingBottom: '1.5rem' }}>
-          {categories.map((cat) => (
-            <Magnetic key={cat} strength={0.25}>
-              <button
-                onClick={() => setActiveFilter(cat)}
-                style={{
-                  padding: '0.65rem 1.4rem',
-                  borderRadius: '100px',
-                  border: '1px solid',
-                  borderColor: activeFilter === cat ? 'var(--color-text)' : 'var(--color-border)',
-                  background: activeFilter === cat ? '#ffffff' : 'transparent',
-                  color: activeFilter === cat ? '#000000' : 'var(--color-text)',
-                  fontSize: '0.92rem',
-                  cursor: 'pointer',
-                  transition: 'all 0.3s ease'
-                }}
-              >
-                {cat}
-              </button>
-            </Magnetic>
-          ))}
-        </div>
-
-        {/* Project Cards Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 540px), 1fr))', gap: 'clamp(2rem, 4vw, 3.5rem)', marginBottom: '6rem' }}>
-          {filteredProjects.map((project) => (
-            <article
-              key={project.id}
-              style={{
-                background: 'var(--color-surface)',
-                border: '1px solid var(--color-border)',
-                borderRadius: '20px',
-                overflow: 'hidden',
-                display: 'flex',
-                flexDirection: 'column',
-                transition: 'transform 0.4s var(--ease-out-expo), border-color 0.3s ease'
-              }}
-            >
-              {/* Media Preview */}
-              <div
-                style={{
-                  width: '100%',
-                  height: 'clamp(240px, 35vh, 340px)',
-                  backgroundColor: project.bgColor || '#1C1D20',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  padding: '2rem',
-                  overflow: 'hidden'
-                }}
-              >
-                <img
-                  src={project.image}
-                  alt={project.title}
+    <>
+      <div className="mouse-pos-list-image no-select">
+        <div className="mouse-pos-list-image-bounce overlay">
+          <div className="float-image-wrap">
+            {projects.map((p, idx) => (
+              <li key={p.id} className="mouse-pos-list-image-inner" data-project={p.id} data-index={idx}>
+                <div
+                  className="overlay overlay-image"
                   style={{
-                    maxHeight: '100%',
-                    maxWidth: '100%',
-                    objectFit: 'contain',
-                    transition: 'transform 0.5s var(--ease-out-expo)'
+                    backgroundImage: `url(${p.svg})`,
+                    backgroundPosition: 'center center',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'cover',
+                    backgroundColor: p.bgColor
                   }}
-                />
-              </div>
-
-              {/* Content */}
-              <div style={{ padding: 'clamp(1.5rem, 3vw, 2.5rem)', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '0.8rem' }}>
-                  <h2 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2.2rem)', fontWeight: 400 }}>{project.title}</h2>
-                  <span style={{ fontSize: '0.9rem', color: 'var(--color-text-subtle)' }}>{project.year}</span>
-                </div>
-
-                <p style={{ color: 'var(--color-text-muted)', fontSize: '1rem', lineHeight: 1.6, marginBottom: '1.5rem', flexGrow: 1 }}>
-                  {project.description}
-                </p>
-
-                {/* Tags */}
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1.8rem' }}>
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      style={{
-                        fontSize: '0.78rem',
-                        padding: '0.35rem 0.8rem',
-                        borderRadius: '100px',
-                        background: 'rgba(255, 255, 255, 0.05)',
-                        border: '1px solid var(--color-border)',
-                        color: 'var(--color-text-muted)'
-                      }}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Actions */}
-                <div style={{ display: 'flex', gap: '1rem', borderTop: '1px solid var(--color-border)', paddingTop: '1.25rem' }}>
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '0.5rem',
-                      fontSize: '0.92rem',
-                      color: 'var(--color-text)',
-                      transition: 'color 0.2s ease'
-                    }}
-                  >
-                    <span>View Repository</span>
-                    <Github size={16} />
-                  </a>
-                </div>
-              </div>
-            </article>
-          ))}
+                ></div>
+              </li>
+            ))}
+          </div>
         </div>
       </div>
-    </main>
+      <div className="mouse-pos-list-btn no-select"></div>
+      <div className="mouse-pos-list-span no-select"><p>View</p></div>
+
+      <div className="main-wrap" id="work">
+        <header className="section default-header work-header">
+          <div className="container medium">
+            <div className="row">
+              <div className="flex-col once-in">
+                <h1><span>Creating next level </span><span>digital products</span></h1>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <section className="section work-filters">
+          <div className="container once-in">
+            <div className="filter-row">
+              <div className="toggle-row">
+                <div
+                  className={`btn btn-normal all-btn ${filter === 'all' ? 'active' : ''}`}
+                  onClick={() => setFilter('all')}
+                >
+                  <div className="btn-click magnetic" data-strength="25" data-strength-text="15">
+                    <div className="btn-fill"></div>
+                    <span className="btn-text">
+                      <span className="btn-text-inner change">All</span>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  className={`btn btn-normal design-btn ${filter === 'design' ? 'active' : ''}`}
+                  onClick={() => setFilter('design')}
+                >
+                  <div className="btn-click magnetic" data-strength="25" data-strength-text="15">
+                    <div className="btn-fill"></div>
+                    <span className="btn-text">
+                      <span className="btn-text-inner change">
+                        Design<div className="count-nr">2</div>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  className={`btn btn-normal development-btn ${filter === 'development' ? 'active' : ''}`}
+                  onClick={() => setFilter('development')}
+                >
+                  <div className="btn-click magnetic" data-strength="25" data-strength-text="15">
+                    <div className="btn-fill"></div>
+                    <span className="btn-text">
+                      <span className="btn-text-inner change">
+                        Development<div className="count-nr">4</div>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid-row">
+                <div
+                  className={`btn btn-normal btn-icon rows-btn ${viewMode === 'rows' ? 'active' : ''}`}
+                  onClick={() => setViewMode('rows')}
+                  title="List View"
+                >
+                  <div className="btn-click magnetic" data-strength="25" data-strength-text="15">
+                    <div className="btn-fill"></div>
+                    <span className="btn-text">
+                      <span className="btn-text-inner change">
+                        <svg style={{ width: '20px' }} width="20" height="19" viewBox="0 0 20 19">
+                          <g fill="currentColor" fillRule="evenodd">
+                            <path d="M0 6h20v1H0zM0 0h20v1H0zM0 12h20v1H0zM0 18h20v1H0z"></path>
+                          </g>
+                        </svg>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  className={`btn btn-normal btn-icon columns-btn ${viewMode === 'columns' ? 'active' : ''}`}
+                  onClick={() => setViewMode('columns')}
+                  title="Grid View"
+                >
+                  <div className="btn-click magnetic" data-strength="25" data-strength-text="15">
+                    <div className="btn-fill"></div>
+                    <span className="btn-text">
+                      <span className="btn-text-inner change">
+                        <svg style={{ width: '20px' }} width="20" height="20" viewBox="0 0 20 20">
+                          <g fill="currentColor" fillRule="nonzero">
+                            <path d="M8 0H0v8h8V0zM7 1v6H1V1h6zM8 12H0v8h8v-8zm-1 1v6H1v-6h6zM20 0h-8v8h8V0zm-1 1v6h-6V1h6zM20 12h-8v8h8v-8zm-1 1v6h-6v-6h6z"></path>
+                          </g>
+                        </svg>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="section-wrap section-wrap-work once-in">
+          {/* VIEW A: List Rows */}
+          <section
+            className={`section work-grid small-work-grid grid-fade grid-rows-part ${viewMode === 'rows' ? 'visible grid-fade-in' : ''}`}
+            style={{ display: viewMode === 'rows' ? 'block' : 'none' }}
+          >
+            <div className="container">
+              <div className="grid-sub-title">
+                <div className="flex-col"><h5>Client</h5></div>
+                <div className="flex-col"><h5>Location</h5></div>
+                <div className="flex-col"><h5>Services</h5></div>
+                <div className="flex-col"><h5>Year</h5></div>
+              </div>
+              <ul className="work-items mouse-pos-list-image-wrap all-active">
+                {filteredProjects.map((p, idx) => (
+                  <li
+                    key={p.id}
+                    className={`visible hover-row ${p.category.join(' ')}`}
+                    data-project={p.id}
+                    data-index={idx}
+                  >
+                    <a href={p.link} target="_blank" rel="noopener noreferrer">
+                      <div className="stripe animate"></div>
+                      <div className="row">
+                        <div className="flex-col">
+                          <h4><span>{p.title}</span></h4>
+                        </div>
+                        <div className="flex-col">
+                          <p>{p.location}</p>
+                        </div>
+                        <div className="flex-col">
+                          <p>{p.services}</p>
+                        </div>
+                        <div className="flex-col">
+                          <p>{p.year}</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                ))}
+                <div className="stripe last animate"></div>
+              </ul>
+            </div>
+          </section>
+
+          {/* VIEW B: Grid Columns */}
+          <section
+            className={`section work-tiles grid-fade grid-columns-part ${viewMode === 'columns' ? 'visible grid-fade-in' : ''}`}
+            style={{ display: viewMode === 'columns' ? 'block' : 'none' }}
+          >
+            <div className="container">
+              <ul>
+                {filteredProjects.map((p, idx) => (
+                  <li
+                    key={p.id}
+                    className={`${p.category.join(' ')} visible`}
+                    data-project={p.id}
+                    data-index={idx}
+                  >
+                    <div className="single-tile-wrap">
+                      <a href={p.link} target="_blank" rel="noopener noreferrer" className="row">
+                        <div className="flex-col">
+                          <div className="tile-image">
+                            <div
+                              className="overlay overlay-image"
+                              style={{
+                                backgroundImage: `url(${p.svg})`,
+                                backgroundColor: p.bgColor,
+                                backgroundPosition: 'center center',
+                                backgroundRepeat: 'no-repeat',
+                                backgroundSize: 'cover'
+                              }}
+                            ></div>
+                          </div>
+                        </div>
+                        <div className="flex-col">
+                          <h4><span>{p.title}</span></h4>
+                          <div className="stripe"></div>
+                        </div>
+                        <div className="flex-col">
+                          <p>{p.sub}</p>
+                        </div>
+                        <div className="flex-col">
+                          <p>{p.tags}</p>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        </section>
+
+        {/* Archive Section */}
+        <section className="section center-grid-btn center-grid-btn-archive">
+          <div className="container">
+            <div className="grid-after-btn">
+              <div className="btn btn-normal btn-dark">
+                <a
+                  href="https://github.com/Aadarshrai1801?tab=repositories"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-click magnetic"
+                  data-strength="25"
+                  data-strength-text="15"
+                >
+                  <div className="btn-fill"></div>
+                  <span className="btn-text">
+                    <span className="btn-text-inner change">
+                      Archive<div className="count-nr">10</div>
+                    </span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }
