@@ -1,15 +1,106 @@
 import React, { useState } from 'react';
 
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState('idle'); // 'idle' | 'submitting' | 'success' | 'error'
+  const [feedback, setFeedback] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      e.target.reset();
-      setSubmitted(false);
-    }, 4000);
+    if (status === 'submitting') return;
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    // Spam honeypot protection (hidden phone input)
+    if (formData.get('tel')) {
+      setStatus('success');
+      setFeedback("Thank you! Your message has been sent successfully.");
+      form.reset();
+      return;
+    }
+
+    const formspreeId = import.meta.env.VITE_FORMSPREE_ID;
+    const web3formsKey = import.meta.env.VITE_WEB3FORMS_KEY;
+
+    setStatus('submitting');
+    setFeedback('');
+
+    try {
+      if (formspreeId) {
+        // Submit via Formspree
+        const payload = {
+          name: formData.get('name'),
+          email: formData.get('email'),
+          company: formData.get('company'),
+          service: formData.get('service'),
+          message: formData.get('message'),
+        };
+
+        const res = await fetch(`https://formspree.io/f/${formspreeId}`, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(payload),
+        });
+
+        if (res.ok) {
+          setStatus('success');
+          setFeedback("Thank you! Your message has been sent successfully.");
+          form.reset();
+          setTimeout(() => {
+            setStatus('idle');
+            setFeedback('');
+          }, 6000);
+        } else {
+          const data = await res.json().catch(() => ({}));
+          throw new Error(data.error || 'Failed to send message. Please try again.');
+        }
+      } else if (web3formsKey) {
+        // Submit via Web3Forms
+        formData.append('access_key', web3formsKey);
+        formData.append('subject', `New Portfolio Inquiry from ${formData.get('name') || 'Visitor'}`);
+        formData.append('from_name', 'Aadarsh Portfolio Contact Form');
+
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData,
+        });
+
+        const data = await res.json().catch(() => ({}));
+        if (data.success) {
+          setStatus('success');
+          setFeedback("Thank you! Your message has been sent successfully.");
+          form.reset();
+          setTimeout(() => {
+            setStatus('idle');
+            setFeedback('');
+          }, 6000);
+        } else {
+          throw new Error(data.message || 'Failed to send message. Please try again.');
+        }
+      } else {
+        // Fallback when no API key is yet configured in .env
+        console.info(
+          "Contact form: Add your Formspree Form ID (VITE_FORMSPREE_ID) or Web3Forms Key (VITE_WEB3FORMS_KEY) to .env to receive emails directly."
+        );
+        setStatus('success');
+        setFeedback("Message received! Note: Configure VITE_FORMSPREE_ID or VITE_WEB3FORMS_KEY in your .env file to route directly to your email inbox.");
+        form.reset();
+        setTimeout(() => {
+          setStatus('idle');
+          setFeedback('');
+        }, 7000);
+      }
+    } catch (err) {
+      console.error("Submission error:", err);
+      setStatus('error');
+      setFeedback(err.message || "An error occurred while sending your message. Please email directly at aadarshrai1801@gmail.com.");
+      setTimeout(() => {
+        setStatus('idle');
+      }, 7000);
+    }
   };
 
   return (
@@ -79,12 +170,44 @@ export default function Contact() {
                     <div className="btn-click magnetic" data-strength="100" data-strength-text="50">
                       <div className="btn-fill"></div>
                       <span className="btn-text">
-                        <span className="btn-text-inner">{submitted ? 'Sent!' : 'Send it!'}</span>
+                        <span className="btn-text-inner">
+                          {status === 'submitting'
+                            ? 'Sending...'
+                            : status === 'success'
+                            ? 'Sent!'
+                            : status === 'error'
+                            ? 'Retry'
+                            : 'Send it!'}
+                        </span>
                       </span>
-                      <input type="submit" name="submit" value="" className="form-btn" />
+                      <input
+                        type="submit"
+                        name="submit"
+                        value=""
+                        className="form-btn"
+                        disabled={status === 'submitting'}
+                      />
                     </div>
                   </div>
                 </div>
+                {feedback && (
+                  <div
+                    className="contact-feedback"
+                    style={{
+                      marginTop: '1.75rem',
+                      padding: '0.85rem 1.25rem',
+                      borderRadius: '8px',
+                      fontSize: '0.95rem',
+                      lineHeight: '1.5',
+                      backgroundColor: status === 'error' ? 'rgba(239, 68, 68, 0.12)' : 'rgba(34, 197, 94, 0.12)',
+                      border: `1px solid ${status === 'error' ? 'rgba(239, 68, 68, 0.3)' : 'rgba(34, 197, 94, 0.3)'}`,
+                      color: status === 'error' ? '#fca5a5' : '#86efac',
+                      transition: 'opacity 0.3s ease',
+                    }}
+                  >
+                    {feedback}
+                  </div>
+                )}
               </form>
             </div>
             <div className="flex-col">

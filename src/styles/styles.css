@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 
-/* ------------------------- Fonts: Dennis Sans -------------------------------------------------- */
+/* ------------------------- Fonts: Neue Montreal -------------------------------------------------- */
 
 @font-face {
-    font-family: 'Dennis Sans';
+    font-family: 'Neue Montreal';
     src: url('/assets/NeueMontreal-Light.otf') format('opentype');
     font-weight: 300;
     font-style: normal;
@@ -11,7 +11,7 @@
 }
 
 @font-face {
-    font-family: 'Dennis Sans';
+    font-family: 'Neue Montreal';
     src: url('/assets/NeueMontreal-Regular.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
@@ -19,7 +19,7 @@
 }
 
 @font-face {
-    font-family: 'Dennis Sans';
+    font-family: 'Neue Montreal';
     src: url('/assets/NeueMontreal-Regular.otf') format('opentype');
     font-weight: 450;
     font-style: normal;
@@ -27,7 +27,7 @@
 }
 
 @font-face {
-    font-family: 'Dennis Sans';
+    font-family: 'Neue Montreal';
     src: url('/assets/NeueMontreal-Regular.otf') format('opentype');
     font-weight: 500;
     font-style: normal;
@@ -35,7 +35,7 @@
 }
 
 @font-face {
-    font-family: 'Dennis Sans';
+    font-family: 'Neue Montreal';
     src: url('/assets/NeueMontreal-Bold.otf') format('opentype');
     font-weight: 700;
     font-style: normal;
@@ -43,61 +43,13 @@
 }
 
 @font-face {
-    font-family: 'Dennis Sans';
+    font-family: 'Neue Montreal';
     src: url('/assets/NeueMontreal-Bold.otf') format('opentype');
     font-weight: 800;
     font-style: normal;
     font-display: swap;
 }
 
-/* Dennis_Sans alias */
-@font-face {
-    font-family: 'Dennis_Sans';
-    src: url('/assets/NeueMontreal-Light.otf') format('opentype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Dennis_Sans';
-    src: url('/assets/NeueMontreal-Regular.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Dennis_Sans';
-    src: url('/assets/NeueMontreal-Regular.otf') format('opentype');
-    font-weight: 450;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Dennis_Sans';
-    src: url('/assets/NeueMontreal-Regular.otf') format('opentype');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Dennis_Sans';
-    src: url('/assets/NeueMontreal-Bold.otf') format('opentype');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Dennis_Sans';
-    src: url('/assets/NeueMontreal-Bold.otf') format('opentype');
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
-}
 
 /* Source: normalize.css */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -600,7 +552,7 @@ li, ul {padding: 0; margin: 0; list-style: none;}
 
 body {
     -webkit-font-smoothing: antialiased;
-    font-family: 'Dennis Sans', 'Dennis_Sans', sans-serif;
+    font-family: 'Neue Montreal', sans-serif;
     color: var(--color-text);
     line-height: 1.6;
     font-weight: 450;
@@ -643,7 +595,7 @@ h1, h2, h3, h4, h5, h6, p, a, li, ul, ol, span, strong, em  {padding: 0; margin:
 h1:last-child, h2:last-child, h3:last-child, h4:last-child, p:last-child, p.big:last-child, p.small:last-child, a:last-child, strong:last-child  {margin-bottom: 0;}
 
 h1 {
-    font-family: 'Dennis Sans', 'Dennis_Sans', sans-serif;
+    font-family: 'Neue Montreal', sans-serif;
     font-weight: 450;
     font-style: normal;
     font-size: clamp(3.25em, 7vw, 8em);
@@ -653,7 +605,7 @@ h1 {
 }
   
 h2 {
-    font-family: 'Dennis Sans', 'Dennis_Sans', sans-serif;
+    font-family: 'Neue Montreal', sans-serif;
     font-weight: 450;
     font-style: normal;
     font-size: calc(clamp(3.25em, 5vw, 4.5em) * .75);
@@ -662,7 +614,7 @@ h2 {
 }
   
 h3 {
-    font-family: 'Dennis Sans', 'Dennis_Sans', sans-serif;
+    font-family: 'Neue Montreal', sans-serif;
     font-weight: 450;
     font-style: normal;
     font-size: clamp(2.66em, 4.65vw, 5.32em);
@@ -671,7 +623,7 @@ h3 {
 }
   
 h4 {
-    font-family: 'Dennis Sans', 'Dennis_Sans', sans-serif;
+    font-family: 'Neue Montreal', sans-serif;
     font-weight: 450;
     font-style: normal;
     font-size: clamp(1.55em, 2.3vw, 2.5em);
@@ -680,7 +632,7 @@ h4 {
 }
 
 h5 {
-    font-family: 'Dennis Sans', 'Dennis_Sans', sans-serif;
+    font-family: 'Neue Montreal', sans-serif;
     font-weight: 450;
     font-style: normal;
     font-size: .6em;
@@ -693,7 +645,7 @@ h5 {
 
 
 p {
-    font-family: 'Dennis Sans', 'Dennis_Sans', sans-serif;
+    font-family: 'Neue Montreal', sans-serif;
     font-weight: 450;
     font-style: normal;
     color: var(--text);
@@ -2144,7 +2096,7 @@ body.loading .loading-container {
    padding-left: .7em;
    white-space: nowrap;
    padding-right: .4em;
-   font-family: 'Dennis Sans', 'Dennis_Sans', sans-serif;
+   font-family: 'Neue Montreal', sans-serif;
    font-weight: 450;
    font-size: calc(clamp(3.25em, 5vw, 4.5em) * .75);
    line-height: 1;
@@ -3920,7 +3872,7 @@ html.js body:not(.hero-reveal) .home-header .hero-scale {
 }
 
 .about-header h1 {
-   font-family: "Dennis Sans", 'Dennis_Sans', sans-serif;
+   font-family: 'Neue Montreal', sans-serif;
    font-size: 70.462px;
    font-weight: 450;
    line-height: 75.042px;
@@ -3932,7 +3884,7 @@ html.js body:not(.hero-reveal) .home-header .hero-scale {
 .about-header h1 span {
    display: block !important;
    white-space: nowrap;
-   font-family: "Dennis Sans", 'Dennis_Sans', sans-serif;
+   font-family: 'Neue Montreal', sans-serif;
    font-size: 70.462px;
    font-weight: 450;
    line-height: 75.042px;
@@ -4164,7 +4116,7 @@ html.js body:not(.hero-reveal) .home-header .hero-scale {
    display: block;
    width: 100%;
    height: auto;
-   font-family: "Dennis Sans", sans-serif;
+   font-family: 'Neue Montreal', sans-serif;
    font-size: 16px;
    font-weight: 450;
    line-height: 25.6px;
@@ -5960,7 +5912,7 @@ html.js .work-tiles ul li.visible:nth-child(4) { animation-delay: .24s; }
 }
 
 /* ==========================================================================
-   Work Page Components & Layouts (Dennis Snellenberg Specification)
+   Work Page Components & Layouts Specification
    ========================================================================== */
 
 /* --- Button Icon --- */

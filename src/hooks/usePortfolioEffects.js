@@ -90,7 +90,7 @@ export function usePortfolioEffects() {
       });
     }
 
-    // 3. Dennis Snellenberg Magnetic Buttons with 3D Text Parallax
+    // 3. Magnetic Buttons with 3D Text Parallax
     if (!reduceMotion) {
       const buttons = document.querySelectorAll('.btn-click.magnetic, .btn-click');
       buttons.forEach((btn) => {
@@ -348,7 +348,7 @@ export function usePortfolioEffects() {
       }
     }
 
-    // 6. Dennis Snellenberg Intro Parallax ("About Me" button)
+    // 6. Intro Parallax ("About Me" button)
     const introSection = document.querySelector('.home-intro');
     const introWrap = introSection ? introSection.querySelector('.btn-wrap-intro') : null;
     if (introSection && introWrap) {
@@ -384,7 +384,7 @@ export function usePortfolioEffects() {
       });
     }
 
-    // 7. Dennis Snellenberg Footer Overlap & Vertical Scroll Parallax
+    // 7. Footer Overlap & Vertical Scroll Parallax
     const footerWrap = document.querySelector('.footer-wrap');
     const footerSpacer = document.querySelector('.footer-spacer');
     const roundedWrap = document.querySelector('.footer-rounded-div .rounded-div-wrap');
