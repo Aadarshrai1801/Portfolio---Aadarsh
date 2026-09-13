@@ -14,23 +14,46 @@ export default function Contact() {
     // Spam honeypot protection (hidden phone input)
     if (formData.get('tel')) {
       setStatus('success');
-      setFeedback("Thank you! Your message has been sent successfully.");
+      setFeedback("Thank You");
       form.reset();
       return;
     }
 
-    let formspreeEndpoint = import.meta.env.VITE_FORMSPREE_ID ? import.meta.env.VITE_FORMSPREE_ID.trim() : '';
-    if (formspreeEndpoint && !formspreeEndpoint.startsWith('http')) {
-      formspreeEndpoint = `https://formspree.io/f/${formspreeEndpoint}`;
-    }
+    const rawFormspree = (import.meta.env.VITE_FORMSPREE_ID || 'xvkojkrj').trim();
+    const formspreeEndpoint = rawFormspree.startsWith('http')
+      ? rawFormspree
+      : `https://formspree.io/f/${rawFormspree}`;
     const web3formsKey = import.meta.env.VITE_WEB3FORMS_KEY ? import.meta.env.VITE_WEB3FORMS_KEY.trim() : '';
 
     setStatus('submitting');
     setFeedback('');
 
     try {
-      if (formspreeEndpoint) {
-        // Submit via Formspree
+      if (web3formsKey) {
+        // Submit via Web3Forms if explicitly configured
+        formData.append('access_key', web3formsKey);
+        formData.append('subject', `New Portfolio Inquiry from ${formData.get('name') || 'Visitor'}`);
+        formData.append('from_name', 'Aadarsh Portfolio Contact Form');
+
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData,
+        });
+
+        const data = await res.json().catch(() => ({}));
+        if (data.success) {
+          setStatus('success');
+          setFeedback("Thank You");
+          form.reset();
+          setTimeout(() => {
+            setStatus('idle');
+            setFeedback('');
+          }, 5000);
+        } else {
+          throw new Error(data.message || 'Failed to send message. Please try again.');
+        }
+      } else {
+        // Default & Primary: Submit via Formspree (xvkojkrj)
         const payload = {
           name: formData.get('name'),
           email: formData.get('email'),
@@ -50,51 +73,16 @@ export default function Contact() {
 
         if (res.ok) {
           setStatus('success');
-          setFeedback("Thank you! Your message has been sent successfully.");
+          setFeedback("Thank You");
           form.reset();
           setTimeout(() => {
             setStatus('idle');
             setFeedback('');
-          }, 6000);
+          }, 5000);
         } else {
           const data = await res.json().catch(() => ({}));
           throw new Error(data.error || 'Failed to send message. Please try again.');
         }
-      } else if (web3formsKey) {
-        // Submit via Web3Forms
-        formData.append('access_key', web3formsKey);
-        formData.append('subject', `New Portfolio Inquiry from ${formData.get('name') || 'Visitor'}`);
-        formData.append('from_name', 'Aadarsh Portfolio Contact Form');
-
-        const res = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          body: formData,
-        });
-
-        const data = await res.json().catch(() => ({}));
-        if (data.success) {
-          setStatus('success');
-          setFeedback("Thank you! Your message has been sent successfully.");
-          form.reset();
-          setTimeout(() => {
-            setStatus('idle');
-            setFeedback('');
-          }, 6000);
-        } else {
-          throw new Error(data.message || 'Failed to send message. Please try again.');
-        }
-      } else {
-        // Fallback when no API key is yet configured in .env
-        console.info(
-          "Contact form: Add your Formspree Form ID (VITE_FORMSPREE_ID) or Web3Forms Key (VITE_WEB3FORMS_KEY) to .env to receive emails directly."
-        );
-        setStatus('success');
-        setFeedback("Message received! Note: Configure VITE_FORMSPREE_ID or VITE_WEB3FORMS_KEY in your .env file to route directly to your email inbox.");
-        form.reset();
-        setTimeout(() => {
-          setStatus('idle');
-          setFeedback('');
-        }, 7000);
       }
     } catch (err) {
       console.error("Submission error:", err);
@@ -177,7 +165,7 @@ export default function Contact() {
                           {status === 'submitting'
                             ? 'Sending...'
                             : status === 'success'
-                            ? 'Sent!'
+                            ? 'Thank You'
                             : status === 'error'
                             ? 'Retry'
                             : 'Send it!'}
