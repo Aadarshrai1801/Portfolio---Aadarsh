@@ -19,14 +19,17 @@ export default function Contact() {
       return;
     }
 
-    const formspreeId = import.meta.env.VITE_FORMSPREE_ID;
-    const web3formsKey = import.meta.env.VITE_WEB3FORMS_KEY;
+    let formspreeEndpoint = import.meta.env.VITE_FORMSPREE_ID ? import.meta.env.VITE_FORMSPREE_ID.trim() : '';
+    if (formspreeEndpoint && !formspreeEndpoint.startsWith('http')) {
+      formspreeEndpoint = `https://formspree.io/f/${formspreeEndpoint}`;
+    }
+    const web3formsKey = import.meta.env.VITE_WEB3FORMS_KEY ? import.meta.env.VITE_WEB3FORMS_KEY.trim() : '';
 
     setStatus('submitting');
     setFeedback('');
 
     try {
-      if (formspreeId) {
+      if (formspreeEndpoint) {
         // Submit via Formspree
         const payload = {
           name: formData.get('name'),
@@ -36,7 +39,7 @@ export default function Contact() {
           message: formData.get('message'),
         };
 
-        const res = await fetch(`https://formspree.io/f/${formspreeId}`, {
+        const res = await fetch(formspreeEndpoint, {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
