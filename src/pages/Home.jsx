@@ -357,7 +357,7 @@ export default function Home() {
 
         <section className="section center-grid-btn center-grid-btn-home">
           <div className="container">
-            <div className="grid-after-btn reveal">
+            <div className="grid-after-btn reveal in-view">
               <div className="btn btn-normal">
                 <a
                   href="/work"
