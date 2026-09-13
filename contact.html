@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <title>Contact - Aadarsh Rai</title>
+      <meta name="description" content="Let's start a project together — Contact Aadarsh Rai, AI Engineer & Full Stack Developer."/>
+      <meta property="og:title" content="Contact - Aadarsh Rai"/>
+      <meta property="og:description" content="Let's start a project together — Contact Aadarsh Rai, AI Engineer & Full Stack Developer."/>
+      <meta property="og:type" content="website"/>
+      <meta name="theme-color" content="#1C1D20"/>
+
+      <link rel="icon" type="image/jpeg" href="assets/avatar.jpg">
+      <link rel="apple-touch-icon" href="assets/avatar.jpg">
+
+      <script>
+          if ('scrollRestoration' in history) {
+              history.scrollRestoration = 'manual';
+          }
+          window.scrollTo(0, 0);
+          if (window.location.hash) {
+              history.replaceState(null, '', window.location.pathname + window.location.search);
+          }
+          window.addEventListener('beforeunload', function () {
+              window.scrollTo(0, 0);
+          });
+          document.documentElement.classList.add('js');
+          try {
+              var navEntry = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+              var isReload = navEntry ? navEntry.type === 'reload' : (performance.navigation && performance.navigation.type === 1);
+              var isBackForward = navEntry ? navEntry.type === 'back_forward' : (performance.navigation && performance.navigation.type === 2);
+              var pendingTransition = false;
+              try {
+                  pendingTransition = (!isReload && (new URLSearchParams(window.location.search).has('transition') || sessionStorage.getItem('pageTransition'))) || isBackForward;
+              } catch (e) {}
+              if (pendingTransition) {
+                  document.documentElement.classList.add('page-transitioning');
+              }
+          } catch (e) {}
+      </script>
+
+      <link rel="preload" as="font" href="assets/NeueMontreal-Regular.otf" type="font/otf" crossorigin="anonymous">
+      <link rel="stylesheet" href="styles.css">
+</head>
+
+    <body class="loading">
+        <div class="no-scroll-overlay"></div>
+        <div class="loading-container">
+            <div class="loading-screen">
+                <div class="rounded-div-wrap top">
+                    <div class="rounded-div"></div>
+                </div>
+                <div class="loading-words">
+                    <h2>Home<div class="dot"></div></h2>
+                    <h2>Work<div class="dot"></div></h2>
+                    <h2>About<div class="dot"></div></h2>
+                    <h2>Contact<div class="dot"></div></h2>
+                </div>
+                <div class="rounded-div-wrap bottom">
+                    <div class="rounded-div"></div>
+                </div>
+            </div>
+        </div>
+        <main class="main no-touch" id="contact">
+            <div class="btn btn-hamburger">
+                <div class="btn-click magnetic">
+                    <div class="btn-fill"></div>
+                    <div class="btn-text">
+                        <div class="btn-bars"></div>
+                        <span class="btn-text-inner">Menu</span>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay fixed-nav-back"></div>
+            <div class="fixed-nav theme-dark">
+                <div class="fixed-nav-rounded-div">
+                    <div class="rounded-div-wrap">
+                        <div class="rounded-div"></div>
+                    </div>
+                </div>
+                <div class="fixed-nav-inner">
+                    <div class="row nav-row">
+                        <h5>Navigation</h5>
+                        <div class="stripe"></div>
+                        <ul class="links-wrap">
+                            <li class="btn btn-link">
+                                <a href="index.html" class="btn-click magnetic">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner">Home</span>
+                                </span>
+                                </a>
+                            </li>
+                            <li class="btn btn-link">
+                                <a href="work.html" class="btn-click magnetic">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner">Work</span>
+                                </span>
+                                </a>
+                            </li>
+                            <li class="btn btn-link">
+                                <a href="about.html" class="btn-click magnetic">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner">About</span>
+                                </span>
+                                </a>
+                            </li>
+                            <li class="btn btn-link active">
+                                <a href="contact.html" class="btn-click magnetic">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner">Contact</span>
+                                </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row social-row">
+                        <div class="stripe"></div>
+                        <div class="socials">
+                            <h5>Socials</h5>
+                            <ul>
+                                <li class="btn btn-link btn-link-external">
+                                    <a href="https://www.linkedin.com/in/aadarshrai1801/" target="_blank" rel="noopener" class="btn-click magnetic">
+                                        <span class="btn-text">
+                                            <span class="btn-text-inner">LinkedIn</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="btn btn-link btn-link-external">
+                                    <a href="https://github.com/Aadarshrai1801" target="_blank" rel="noopener" class="btn-click magnetic">
+                                        <span class="btn-text">
+                                            <span class="btn-text-inner">GitHub</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="btn btn-link btn-link-external">
+                                    <a href="mailto:aadarshrai1801@gmail.com" class="btn-click magnetic">
+                                        <span class="btn-text">
+                                            <span class="btn-text-inner">Email</span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-wrap">
+                <header class="section default-header contact-header theme-dark">
+                    <div class="nav-bar">
+                        <div class="credits-top">
+                            <div class="btn btn-link btn-left-top">
+                                <a href="index.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                <span class="btn-text">
+                                    <div class="credit"><span>©</span></div><div class="cbd"><span class="code-by">Code by </span><span class="author">Aadarsh</span><span class="author-last"> Rai</span></div>
+                                </span>
+                                </a>
+                            </div>
+                        </div>
+                        <ul class="links-wrap">
+                            <li class="btn btn-link">
+                                <a href="work.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner">Work</span>
+                                </span>
+                                </a>
+                            </li>
+                            <li class="btn btn-link">
+                                <a href="about.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner">About</span>
+                                </span>
+                                </a>
+                            </li>
+                            <li class="btn btn-link active">
+                                <a href="contact.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner">Contact</span>
+                                </span>
+                                </a>
+                            </li>
+                            <li class="btn btn-link btn-menu">
+                                <div class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                    <div class="btn-text">
+                                        <span class="btn-text-inner">Menu</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="container medium">
+                        <div class="row once-in">
+                            <div class="flex-col">
+                                <h1><span><div class="profile-picture"></div> Let's start a </span><span>project together</span></h1>
+                            </div>
+                            <div class="flex-col">
+                                <div class="profile-picture"></div>
+                                <div class="arrow"><svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                    <title>arrow-down-right</title>
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g transform="translate(-1019.000000, -279.000000)" stroke="#FFFFFF" stroke-width="1.5">
+                                            <g transform="translate(1026.000000, 286.000000) rotate(90.000000) translate(-1026.000000, -286.000000) translate(1020.000000, 280.000000)">
+                                                <polyline points="2.76923077 0 12 0 12 9.23076923"></polyline>
+                                                <line x1="12" y1="0" x2="0" y2="12"></line>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg></div>
+                            </div>
+                        </div>
+                        <div class="row once-in">
+                            <div class="flex-col">
+                                <form class="form" id="contact-form">
+                                    <div class="website-field">
+                                        <label class="label" for="form-tel">Phone Number</label>
+                                        <input class="field" type="text" id="form-tel" name="tel" tabindex="-1">
+                                    </div>
+                                    <div class="form-col">
+                                        <h5>01</h5>
+                                        <label class="label" for="form-name">What's your name?</label>
+                                        <input class="field" type="text" id="form-name" name="name" required placeholder="John Doe *">
+                                    </div>
+                                    <div class="form-col">
+                                        <h5>02</h5>
+                                        <label class="label" for="form-email">What's your email?</label>
+                                        <input class="field" type="email" id="form-email" name="email" required placeholder="john@doe.com *">
+                                    </div>
+                                    <div class="form-col">
+                                        <h5>03</h5>
+                                        <label class="label" for="form-company">What's the name of your organization?</label>
+                                        <input class="field" type="text" id="form-company" name="company" placeholder="John &amp; Doe ®">
+                                    </div>
+                                    <div class="form-col">
+                                        <h5>04</h5>
+                                        <label class="label" for="form-service">What services are you looking for?</label>
+                                        <input class="field" type="text" id="form-service" name="service" placeholder="Web Design, Web Development ...">
+                                    </div>
+                                    <div class="form-col">
+                                        <h5>05</h5>
+                                        <label class="label" for="form-message">Your message</label>
+                                        <textarea class="field" id="form-message" name="message" rows="8" required placeholder="Hello Aadarsh, can you help me with ... *"></textarea>
+                                    </div>
+                                    <div class="btn-contact-send">
+                                        <div class="btn btn-round" data-scroll data-scroll-speed="2">
+                                            <div class="btn-click magnetic" data-strength="100" data-strength-text="50">
+                                                <div class="btn-fill"></div>
+                                                <span class="btn-text">
+                                                    <span class="btn-text-inner">Send it!</span>
+                                                </span>
+                                                <input type="submit" name="submit" value="" class="form-btn">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="flex-col">
+                                <h5>Contact Details</h5>
+                                <ul class="links-wrap">
+                                    <li class="btn btn-link btn-link-external">
+                                        <a href="mailto:aadarshrai1801@gmail.com" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                            <span class="btn-text">
+                                                <span class="btn-text-inner">aadarshrai1801@gmail.com</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="btn btn-link btn-link-external">
+                                        <a href="tel:+918434501384" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                            <span class="btn-text">
+                                                <span class="btn-text-inner">+91 8434501384</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <h5>Business Details</h5>
+                                <ul class="links-wrap">
+                                    <li><p>Aadarsh Rai</p></li>
+                                    <li><p>Location: Dubai, UAE</p></li>
+                                </ul>
+                                <h5>Socials</h5>
+                                <ul class="links-wrap">
+                                    <li class="btn btn-link btn-link-external">
+                                        <a href="https://www.linkedin.com/in/aadarshrai1801/" target="_blank" rel="noopener" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                            <span class="btn-text">
+                                                <span class="btn-text-inner">LinkedIn</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="btn btn-link btn-link-external">
+                                        <a href="https://github.com/Aadarshrai1801" target="_blank" rel="noopener" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                            <span class="btn-text">
+                                                <span class="btn-text-inner">GitHub</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="btn btn-link btn-link-external">
+                                        <a href="https://twitter.com/" target="_blank" rel="noopener" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                            <span class="btn-text">
+                                                <span class="btn-text-inner">Twitter</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="btn btn-link btn-link-external">
+                                        <a href="https://instagram.com/" target="_blank" rel="noopener" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                            <span class="btn-text">
+                                                <span class="btn-text-inner">Instagram</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <footer class="section footer footer-contact theme-dark">
+                    <div class="container no-padding">
+                        <div class="row bottom-footer">
+                            <div class="flex-col">
+                                <div class="credits">
+                                    <h5>Version</h5>
+                                    <p>2026 © Edition</p>
+                                </div>
+                                <div class="time">
+                                    <h5>Local time</h5>
+                                    <p><span id="timeSpan">--:-- GST</span></p>
+                                </div>
+                            </div>
+                            <div class="flex-col">
+                                <div class="socials">
+                                    <h5>Socials</h5>
+                                    <ul>
+                                        <li class="btn btn-link btn-link-external">
+                                            <a href="https://www.linkedin.com/in/aadarshrai1801/" target="_blank" rel="noopener" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                                <span class="btn-text">
+                                                    <span class="btn-text-inner">LinkedIn</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="btn btn-link btn-link-external">
+                                            <a href="https://github.com/Aadarshrai1801" target="_blank" rel="noopener" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                                <span class="btn-text">
+                                                    <span class="btn-text-inner">GitHub</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="btn btn-link btn-link-external">
+                                            <a href="https://twitter.com/" target="_blank" rel="noopener" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                                <span class="btn-text">
+                                                    <span class="btn-text-inner">Twitter</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="btn btn-link btn-link-external">
+                                            <a href="https://instagram.com/" target="_blank" rel="noopener" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                                <span class="btn-text">
+                                                    <span class="btn-text-inner">Instagram</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="stripe"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </main>
+
+        <script>
+        (function () {
+            'use strict';
+
+            var body = document.body;
+            var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            /* ---------- Loading screen & Page Transitions ---------- */
+            var loader = document.querySelector('.loading-container');
+            var loaderScreen = document.querySelector('.loading-screen');
+            var loaderWords = document.querySelector('.loading-words');
+            var sleep = function (ms) { return new Promise(function (r) { setTimeout(r, ms); }); };
+
+            function coverScreenInU(pageName) {
+                return new Promise(function (resolve) {
+                    if (!loader || reduceMotion) {
+                        return resolve();
+                    }
+                    loader.style.display = 'block';
+                    loader.style.pointerEvents = 'all';
+                    loader.style.zIndex = '10000';
+                    body.classList.add('loading');
+
+                    var allWords = loader.querySelectorAll('.loading-words h2');
+                    var targetWord = null;
+                    for (var i = 0; i < allWords.length; i++) {
+                        allWords[i].style.display = 'none';
+                        allWords[i].classList.remove('active');
+                        allWords[i].style.opacity = '0';
+                        var txt = allWords[i].textContent.trim();
+                        if (txt.toLowerCase() === (pageName || '').toLowerCase()) {
+                            targetWord = allWords[i];
+                        }
+                    }
+                    if (!targetWord) {
+                        targetWord = loader.querySelector('.loading-words h2') || allWords[0];
+                        if (targetWord) {
+                            targetWord.innerHTML = (pageName || '') + '<div class="dot"></div>';
+                        }
+                    }
+                    if (targetWord) {
+                        targetWord.style.display = 'block';
+                        targetWord.classList.add('active');
+                        targetWord.style.opacity = '0';
+                    }
+                    loaderWords.style.opacity = '1';
+
+                    var duration = 720;
+                    var screenHeight = loaderScreen.offsetHeight || window.innerHeight;
+                    var screenWidth = loaderScreen.offsetWidth || window.innerWidth;
+                    var depth = Math.min(screenWidth * 0.35, screenHeight * 0.45);
+                    var samples = 32;
+                    var startTime = null;
+
+                    var step = function (now) {
+                        if (startTime === null) { startTime = now; }
+                        var t = Math.min((now - startTime) / duration, 1);
+                        var eased = 1 - Math.pow(1 - t, 3);
+
+                        var curveFactor = Math.sin(t * Math.PI);
+                        var currentDepth = depth * (0.35 + 0.65 * curveFactor);
+                        var edge = (screenHeight + currentDepth) - eased * (screenHeight + currentDepth * 2.8);
+
+                        var points = [];
+                        for (var i = 0; i <= samples; i++) {
+                            var x = i / samples;
+                            var y = edge - currentDepth * 4 * x * (1 - x);
+                            points.push((x * 100).toFixed(2) + '% ' + y.toFixed(1) + 'px');
+                        }
+                        points.push('100% 100%', '0% 100%');
+                        loaderScreen.style.clipPath = 'polygon(' + points.join(', ') + ')';
+
+                        if (targetWord) {
+                            if (t < 0.22) {
+                                targetWord.style.opacity = '0';
+                            } else if (t < 0.65) {
+                                var progress = (t - 0.22) / 0.43;
+                                targetWord.style.opacity = progress.toFixed(3);
+                            } else {
+                                targetWord.style.opacity = '1';
+                            }
+                        }
+
+                        if (t < 1) {
+                            requestAnimationFrame(step);
+                        } else {
+                            loaderScreen.style.clipPath = 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)';
+                            if (targetWord) { targetWord.style.opacity = '1'; }
+                            resolve();
+                        }
+                    };
+                    requestAnimationFrame(step);
+                });
+            }
+
+            function collapseLoaderInU() {
+                return new Promise(function (resolve) {
+                    var duration = 950;
+                    var screenHeight = loaderScreen.offsetHeight || window.innerHeight;
+                    var screenWidth = loaderScreen.offsetWidth || window.innerWidth;
+                    var depth = Math.min(screenWidth * 0.35, screenHeight * 0.45);
+                    var samples = 32;
+                    var startTime = null;
+
+                    var activeWord = loader ? (loader.querySelector('.loading-words h2.active') || loader.querySelector('.loading-words h2:not([style*="display: none"])')) : null;
+
+                    var step = function (now) {
+                        if (startTime === null) { startTime = now; }
+                        var t = Math.min((now - startTime) / duration, 1);
+                        var eased = 1 - Math.pow(1 - t, 3);
+
+                        var curveFactor = Math.sin(t * Math.PI);
+                        var currentDepth = depth * (0.35 + 0.65 * curveFactor);
+                        var edge = (screenHeight + currentDepth) - eased * (screenHeight + currentDepth * 2.8);
+
+                        var points = [];
+                        for (var i = 0; i <= samples; i++) {
+                            var x = i / samples;
+                            var y = edge + currentDepth * 4 * x * (1 - x);
+                            points.push((x * 100).toFixed(2) + '% ' + y.toFixed(1) + 'px');
+                        }
+                        points.push('100% 0%', '0% 0%');
+                        loaderScreen.style.clipPath = 'polygon(' + points.join(', ') + ')';
+
+                        if (activeWord && t > 0.1) {
+                            activeWord.style.opacity = Math.max(0, 1 - (t - 0.1) * 3.5).toFixed(3);
+                        }
+
+                        if (t < 1) {
+                            requestAnimationFrame(step);
+                        } else {
+                            loaderScreen.style.clipPath = '';
+                            loader.style.display = 'none';
+                            loader.style.pointerEvents = 'none';
+                            loader.style.zIndex = '';
+                            body.classList.remove('loading');
+                            if (activeWord) {
+                                activeWord.style.display = 'none';
+                                activeWord.classList.remove('active');
+                            }
+                            resolve();
+                        }
+                    };
+                    requestAnimationFrame(step);
+                });
+            }
+
+            function runLoader() {
+                if (!loader || reduceMotion) {
+                    if (loader) { loader.style.display = 'none'; }
+                    body.classList.remove('loading');
+                    document.documentElement.classList.remove('page-transitioning');
+                    return Promise.resolve();
+                }
+
+                loader.style.display = 'block';
+                loader.style.pointerEvents = 'all';
+                loader.style.zIndex = '10000';
+                loaderScreen.style.clipPath = 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)';
+                body.classList.add('loading');
+
+                try {
+                    sessionStorage.removeItem('pageTransition');
+                } catch (e) {}
+
+                try {
+                    var cleanUrl = window.location.pathname + (window.location.hash || '');
+                    history.replaceState(null, '', cleanUrl);
+                } catch (e) {}
+
+                var allWords = loader.querySelectorAll('.loading-words h2');
+                Array.prototype.forEach.call(allWords, function (w) {
+                    w.style.display = 'none';
+                    w.style.opacity = '0';
+                    w.classList.remove('active');
+                });
+
+                var targetWord = null;
+                for (var i = 0; i < allWords.length; i++) {
+                    var txt = allWords[i].textContent.trim();
+                    if (txt.toLowerCase() === 'contact') {
+                        targetWord = allWords[i];
+                        break;
+                    }
+                }
+                if (!targetWord && allWords.length > 0) {
+                    targetWord = allWords[0];
+                    targetWord.innerHTML = 'Contact<div class="dot"></div>';
+                }
+                if (targetWord) {
+                    targetWord.style.display = 'block';
+                    targetWord.classList.add('active');
+                    targetWord.style.opacity = '1';
+                }
+
+                loaderWords.style.opacity = '1';
+
+                return sleep(260).then(function () {
+                    return collapseLoaderInU();
+                }).then(function () {
+                    loader.style.display = 'none';
+                    loader.style.pointerEvents = 'none';
+                    body.classList.remove('loading');
+                    document.documentElement.classList.remove('page-transitioning');
+                });
+            }
+
+            function initPageTransitions() {
+                var isTransitioning = false;
+
+                window.addEventListener('pageshow', function (e) {
+                    isTransitioning = false;
+                    if (e.persisted) {
+                        runLoader();
+                    }
+                });
+
+                document.addEventListener('click', function (e) {
+                    var link = e.target.closest('a');
+                    if (!link) return;
+
+                    var href = link.getAttribute('href');
+                    if (!href) return;
+
+                    if (link.target === '_blank' || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:')) {
+                        return;
+                    }
+                    if (href.startsWith('http://') || href.startsWith('https://')) {
+                        try {
+                            var url = new URL(href, window.location.origin);
+                            if (url.origin !== window.location.origin) return;
+                        } catch (err) {
+                            return;
+                        }
+                    }
+
+                    var pageName = 'Home';
+                    var lowerHref = href.toLowerCase();
+
+                    if (lowerHref.indexOf('contact.html') !== -1) {
+                        pageName = 'Contact';
+                    } else if (lowerHref.indexOf('about.html') !== -1) {
+                        pageName = 'About';
+                    } else if (lowerHref.indexOf('work') !== -1) {
+                        pageName = 'Work';
+                    } else if (lowerHref.indexOf('home') !== -1 || lowerHref === 'index.html' || lowerHref === './' || lowerHref === '/') {
+                        pageName = 'Home';
+                    } else {
+                        var text = (link.querySelector('.btn-text-inner') || link).textContent.trim();
+                        if (text) pageName = text;
+                    }
+
+                    var currentPath = window.location.pathname.split('/').pop() || 'contact.html';
+                    var isHashOnly = false;
+
+                    if (href.startsWith('#')) {
+                        isHashOnly = true;
+                    } else {
+                        try {
+                            var parsedUrl = new URL(href, window.location.href);
+                            var targetPath = parsedUrl.pathname.split('/').pop() || 'index.html';
+                            if (targetPath === currentPath && parsedUrl.hash) {
+                                isHashOnly = true;
+                                href = parsedUrl.hash;
+                            }
+                        } catch (err) {}
+                    }
+
+                    e.preventDefault();
+                    if (isTransitioning) return;
+                    isTransitioning = true;
+
+                    if (body.classList.contains('nav-active')) {
+                        body.classList.remove('nav-active');
+                        var hamburger = document.querySelector('.btn-hamburger');
+                        if (hamburger) hamburger.classList.remove('active');
+                    }
+
+                    coverScreenInU(pageName).then(function () {
+                        if (isHashOnly) {
+                            var hash = href;
+                            var targetElem = hash === '#home' ? document.documentElement : document.querySelector(hash);
+                            if (targetElem) {
+                                targetElem.scrollIntoView({ behavior: 'auto' });
+                                history.pushState(null, '', hash);
+                            }
+                            setTimeout(function () {
+                                collapseLoaderInU().then(function () {
+                                    isTransitioning = false;
+                                });
+                            }, 100);
+                        } else {
+                            try {
+                                sessionStorage.setItem('pageTransition', pageName);
+                            } catch (e) {}
+                            var destUrl;
+                            try {
+                                destUrl = new URL(href, window.location.href);
+                                destUrl.searchParams.set('transition', pageName);
+                                window.location.href = destUrl.toString();
+                            } catch (err) {
+                                window.location.href = href;
+                            }
+                        }
+                    });
+                });
+            }
+
+            /* ---------- Menu ---------- */
+            function initMenu() {
+                var main = document.querySelector('main');
+                var hamburger = document.querySelector('.btn-hamburger');
+                var openers = document.querySelectorAll('.btn-hamburger .btn-click, .btn-menu .btn-click');
+                var setMenu = function (open) {
+                    body.classList.toggle('nav-active', open);
+                    if (hamburger) { hamburger.classList.toggle('active', open); }
+                };
+                Array.prototype.forEach.call(openers, function (btn) {
+                    btn.addEventListener('click', function () {
+                        setMenu(!body.classList.contains('nav-active'));
+                    });
+                });
+                Array.prototype.forEach.call(document.querySelectorAll('.fixed-nav a'), function (link) {
+                    link.addEventListener('click', function () { setMenu(false); });
+                });
+                var back = document.querySelector('.fixed-nav-back');
+                if (back) {
+                    back.addEventListener('click', function () { setMenu(false); });
+                }
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape') { setMenu(false); }
+                });
+                var onScroll = function () {
+                    if (main) { main.classList.toggle('scrolled', window.scrollY > 60); }
+                };
+                window.addEventListener('scroll', onScroll, { passive: true });
+                onScroll();
+            }
+
+            /* ---------- Local time (Dubai) ---------- */
+            function initTime() {
+                var el = document.getElementById('timeSpan');
+                if (!el) { return; }
+                var format = function () {
+                    try {
+                        return new Intl.DateTimeFormat('en-GB', {
+                            hour: '2-digit', minute: '2-digit', hour12: true, timeZone: 'Asia/Dubai'
+                        }).format(new Date()).toLowerCase() + ' GST';
+                    } catch (err) {
+                        return new Date().toLocaleTimeString() + ' GST';
+                    }
+                };
+                el.textContent = format();
+                setInterval(function () { el.textContent = format(); }, 15000);
+            }
+
+            /* ---------- Magnetic Buttons ---------- */
+            function initMagneticButtons() {
+                if (reduceMotion) { return; }
+                var buttons = document.querySelectorAll('.magnetic');
+                Array.prototype.forEach.call(buttons, function (btn) {
+                    var strength = parseFloat(btn.getAttribute('data-strength')) || 30;
+                    var textStrength = parseFloat(btn.getAttribute('data-strength-text')) || 15;
+                    var text = btn.querySelector('.btn-text, .btn-text-inner');
+
+                    btn.addEventListener('mousemove', function (e) {
+                        var rect = btn.getBoundingClientRect();
+                        var relX = e.clientX - (rect.left + rect.width / 2);
+                        var relY = e.clientY - (rect.top + rect.height / 2);
+                        var moveX = (relX / (rect.width / 2)) * (strength * 0.45);
+                        var moveY = (relY / (rect.height / 2)) * (strength * 0.45);
+
+                        btn.style.transform = 'translate3d(' + moveX.toFixed(2) + 'px, ' + moveY.toFixed(2) + 'px, 0)';
+                        if (text) {
+                            var tMoveX = (relX / (rect.width / 2)) * (textStrength * 0.45);
+                            var tMoveY = (relY / (rect.height / 2)) * (textStrength * 0.45);
+                            text.style.transform = 'translate3d(' + tMoveX.toFixed(2) + 'px, ' + tMoveY.toFixed(2) + 'px, 0)';
+                        }
+                    });
+
+                    btn.addEventListener('mouseleave', function () {
+                        btn.style.transform = 'translate3d(0, 0, 0)';
+                        btn.style.transition = 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
+                        if (text) {
+                            text.style.transform = 'translate3d(0, 0, 0)';
+                            text.style.transition = 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
+                        }
+                        setTimeout(function () {
+                            btn.style.transition = '';
+                            if (text) { text.style.transition = ''; }
+                        }, 500);
+                    });
+                });
+            }
+
+            /* ---------- Form Input States & Submission ---------- */
+            function initFormInteractions() {
+                var form = document.getElementById('contact-form');
+                if (!form) { return; }
+
+                var fields = form.querySelectorAll('.field');
+                Array.prototype.forEach.call(fields, function (field) {
+                    var parentCol = field.closest('.form-col');
+                    var checkValue = function () {
+                        if (parentCol) {
+                            parentCol.classList.toggle('not-empty', field.value.trim().length > 0);
+                        }
+                    };
+                    field.addEventListener('input', checkValue);
+                    field.addEventListener('change', checkValue);
+                    field.addEventListener('blur', checkValue);
+                    checkValue();
+                });
+
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    var name = (document.getElementById('form-name') || {}).value || '';
+                    var email = (document.getElementById('form-email') || {}).value || '';
+                    var company = (document.getElementById('form-company') || {}).value || '';
+                    var service = (document.getElementById('form-service') || {}).value || '';
+                    var message = (document.getElementById('form-message') || {}).value || '';
+
+                    var subject = encodeURIComponent('Project inquiry from ' + name + (company ? ' (' + company + ')' : ''));
+                    var bodyContent = encodeURIComponent(
+                        'Name: ' + name + '\n' +
+                        'Email: ' + email + '\n' +
+                        'Organization: ' + company + '\n' +
+                        'Services: ' + service + '\n\n' +
+                        'Message:\n' + message
+                    );
+
+                    // Mailto fallback
+                    window.location.href = 'mailto:aadarshrai1801@gmail.com?subject=' + subject + '&body=' + bodyContent;
+
+                    // UI feedback on the send button
+                    var sendBtn = form.querySelector('.btn-contact-send .btn-text-inner');
+                    if (sendBtn) {
+                        var origText = sendBtn.textContent;
+                        sendBtn.textContent = 'Sending...';
+                        setTimeout(function () {
+                            sendBtn.textContent = 'Thank You!';
+                            setTimeout(function () {
+                                sendBtn.textContent = origText;
+                            }, 3500);
+                        }, 600);
+                    }
+                });
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                window.scrollTo(0, 0);
+                initPageTransitions();
+                runLoader();
+                initMenu();
+                initTime();
+                initMagneticButtons();
+                initFormInteractions();
+            });
+        })();
+        </script>
+    </body>
+</html>

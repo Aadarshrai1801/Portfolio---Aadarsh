@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17102E"/>
+      <stop offset="1" stop-color="#6D28D9"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.78" cy="0.22" r="0.7">
+      <stop offset="0" stop-color="#C4B5FD" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#C4B5FD" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="34" height="34" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.6" fill="#FFFFFF" fill-opacity="0.1"/>
+    </pattern>
+  </defs>
+  <rect width="1000" height="1000" fill="url(#bg)"/>
+  <rect width="1000" height="1000" fill="url(#dots)"/>
+  <rect width="1000" height="1000" fill="url(#glow)"/>
+  <g>
+    <rect x="520" y="270" width="360" height="220" rx="28" fill="#FFFFFF" fill-opacity="0.1" stroke="#C4B5FD" stroke-opacity="0.6" stroke-width="3"/>
+    <path d="M560 490 L560 560 L640 490 Z" fill="#FFFFFF" fill-opacity="0.1" stroke="#C4B5FD" stroke-opacity="0.6" stroke-width="3"/>
+    <line x1="570" y1="330" x2="830" y2="330" stroke="#DDD6FE" stroke-opacity="0.7" stroke-width="6" stroke-linecap="round"/>
+    <line x1="570" y1="370" x2="760" y2="370" stroke="#DDD6FE" stroke-opacity="0.5" stroke-width="6" stroke-linecap="round"/>
+    <line x1="570" y1="410" x2="800" y2="410" stroke="#DDD6FE" stroke-opacity="0.5" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <polyline points="260,620 320,620 350,560 380,680 410,600 440,620 520,620" fill="none" stroke="#A78BFA" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="700" cy="650" r="90" fill="none" stroke="#A78BFA" stroke-opacity="0.5" stroke-width="3"/>
+  <circle cx="700" cy="650" r="130" fill="none" stroke="#A78BFA" stroke-opacity="0.25" stroke-width="3"/>
+  <text x="70" y="110" font-family="Arial, Helvetica, sans-serif" font-size="22" letter-spacing="7" fill="#DDD6FE">NLP · LLM · RAG</text>
+  <text x="70" y="905" font-family="Arial, Helvetica, sans-serif" font-size="86" font-weight="800" fill="#FFFFFF">IntelliCast</text>
+</svg>

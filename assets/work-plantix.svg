@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06281A"/>
+      <stop offset="1" stop-color="#15803D"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.8" cy="0.2" r="0.7">
+      <stop offset="0" stop-color="#86EFAC" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#86EFAC" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="34" height="34" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.6" fill="#FFFFFF" fill-opacity="0.1"/>
+    </pattern>
+  </defs>
+  <rect width="1000" height="1000" fill="url(#bg)"/>
+  <rect width="1000" height="1000" fill="url(#dots)"/>
+  <rect width="1000" height="1000" fill="url(#glow)"/>
+  <g fill="none" stroke="#A7F3D0" stroke-width="5">
+    <path d="M540 250 C700 340 700 540 540 630 C380 540 380 340 540 250 Z" fill="#FFFFFF" fill-opacity="0.08"/>
+    <path d="M540 250 L540 630"/>
+    <path d="M540 330 L610 300 M540 400 L640 370 M540 470 L650 445 M540 540 L620 520"/>
+  </g>
+  <circle cx="300" cy="430" r="70" fill="none" stroke="#86EFAC" stroke-opacity="0.4" stroke-width="3"/>
+  <circle cx="300" cy="430" r="110" fill="none" stroke="#86EFAC" stroke-opacity="0.2" stroke-width="3"/>
+  <text x="70" y="110" font-family="Arial, Helvetica, sans-serif" font-size="22" letter-spacing="7" fill="#BBF7D0">DEEP LEARNING · COMPUTER VISION</text>
+  <text x="70" y="905" font-family="Arial, Helvetica, sans-serif" font-size="86" font-weight="800" fill="#FFFFFF">Plantix</text>
+</svg>

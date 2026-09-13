@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <title>Aadarsh Rai</title>
+      <meta name="description" content="Aadarsh Rai — AI and Machine Learning Engineer based in Dubai, UAE. Building practical, production-oriented machine learning systems and intelligent applications.">
+      <meta property="og:title" content="Aadarsh Rai">
+      <meta property="og:description" content="AI and Machine Learning Engineer based in Dubai, UAE. Building practical, production-oriented machine learning systems and intelligent applications.">
+      <meta property="og:image" content="assets/hero.jpg">
+      <meta property="og:site_name" content="Aadarsh Rai">
+      <meta property="og:locale" content="en">
+      <meta property="og:type" content="website">
+      <meta property="twitter:title" content="Aadarsh Rai">
+      <meta property="twitter:description" content="AI and Machine Learning Engineer based in Dubai, UAE. Building practical, production-oriented machine learning systems and intelligent applications.">
+      <meta property="twitter:image" content="assets/hero.jpg">
+      <meta name="twitter:card" content="summary_large_image">
+      <link rel="icon" type="image/jpeg" href="assets/avatar.jpg">
+      <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+      <link rel="apple-touch-icon" href="assets/avatar.jpg">
+
+      <script>
+          if ('scrollRestoration' in history) {
+              history.scrollRestoration = 'manual';
+          }
+          window.scrollTo(0, 0);
+          if (window.location.hash) {
+              history.replaceState(null, '', window.location.pathname + window.location.search);
+          }
+          window.addEventListener('beforeunload', function () {
+              window.scrollTo(0, 0);
+          });
+          document.documentElement.classList.add('js');
+          try {
+              var navEntry = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+              var isReload = navEntry ? navEntry.type === 'reload' : (performance.navigation && performance.navigation.type === 1);
+              var isBackForward = navEntry ? navEntry.type === 'back_forward' : (performance.navigation && performance.navigation.type === 2);
+              var pendingTransition = false;
+              try {
+                  pendingTransition = (!isReload && (new URLSearchParams(window.location.search).has('transition') || sessionStorage.getItem('pageTransition'))) || isBackForward;
+              } catch (e) {}
+              if (pendingTransition) {
+                  document.documentElement.classList.add('page-transitioning');
+              }
+          } catch (e) {}
+      </script>
+
+      <link rel="preload" as="font" href="assets/NeueMontreal-Regular.otf" type="font/otf" crossorigin="anonymous">
+      <link rel="stylesheet" href="styles.css">
+</head>
+
+    <body class="loading">
+        <div class="no-scroll-overlay"></div>
+        <div class="loading-container">
+            <div class="loading-screen">
+                <div class="rounded-div-wrap top">
+                    <div class="rounded-div"></div>
+                </div>
+                <div class="loading-words">
+                    <h2 class="home-active home-active-first">Hello<div class="dot"></div></h2>
+                    <h2 class="home-active">Bonjour<div class="dot"></div></h2>
+                    <h2 class="home-active">नमस्ते<div class="dot"></div></h2>
+                    <h2 class="home-active">Ciao<div class="dot"></div></h2>
+                    <h2 class="home-active">Olá<div class="dot"></div></h2>
+                    <h2 class="home-active jap">こんにちは<div class="dot"></div></h2>
+                    <h2 class="home-active">Hallå<div class="dot"></div></h2>
+                    <h2 class="home-active">Guten tag<div class="dot"></div></h2>
+                    <h2 class="home-active home-active-last">Namaste<div class="dot"></div></h2>
+                    <h2>Home<div class="dot"></div></h2>
+                    <h2>Work<div class="dot"></div></h2>
+                    <h2>About<div class="dot"></div></h2>
+                    <h2>Contact<div class="dot"></div></h2>
+                </div>
+                <div class="rounded-div-wrap bottom">
+                    <div class="rounded-div"></div>
+                </div>
+            </div>
+        </div>
+        <main class="main no-touch" id="home">
+            <div class="mouse-pos-list-image no-select">
+                <div class="mouse-pos-list-image-bounce overlay">
+                    <div class="float-image-wrap">
+                        <li class="mouse-pos-list-image-inner" data-project="marketpulse">
+                            <div class="overlay overlay-image" style="background-image: url(assets/work-marketpulse.svg); background-position: center center; background-repeat: no-repeat; background-size: cover; background-color: #0B1220;"></div>
+                        </li>
+                        <li class="mouse-pos-list-image-inner" data-project="plantix">
+                            <div class="overlay overlay-image" style="background-image: url(assets/work-plantix.svg); background-position: center center; background-repeat: no-repeat; background-size: cover; background-color: #06281A;"></div>
+                        </li>
+                        <li class="mouse-pos-list-image-inner" data-project="intellicast">
+                            <div class="overlay overlay-image" style="background-image: url(assets/work-intellicast.svg); background-position: center center; background-repeat: no-repeat; background-size: cover; background-color: #17102E;"></div>
+                        </li>
+                        <li class="mouse-pos-list-image-inner" data-project="quickshow">
+                            <div class="overlay overlay-image" style="background-image: url(assets/work-quickshow.svg); background-position: center center; background-repeat: no-repeat; background-size: cover; background-color: #2A0A12;"></div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+            <div class="mouse-pos-list-btn no-select"></div>
+            <div class="mouse-pos-list-span no-select"><p>View</p></div>
+            <div class="btn btn-hamburger">
+                <div class="btn-click magnetic">
+                    <div class="btn-fill"></div>
+                    <div class="btn-text">
+                        <div class="btn-bars"></div>
+                        <span class="btn-text-inner">Menu</span>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay fixed-nav-back"></div>
+            <div class="fixed-nav theme-dark">
+                <div class="fixed-nav-rounded-div">
+                    <div class="rounded-div-wrap">
+                        <div class="rounded-div"></div>
+                    </div>
+                </div>
+                <div class="fixed-nav-inner">
+                    <div class="row nav-row">
+                        <h5>Navigation</h5>
+                        <div class="stripe"></div>
+                        <ul class="links-wrap">
+                            <li class="btn btn-link active">
+                                <a href="#home" class="btn-click magnetic">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner">Home</span>
+                                </span>
+                                </a>
+                            </li>
+                            <li class="btn btn-link">
+                                <a href="work.html" class="btn-click magnetic">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner">Work</span>
+                                </span>
+                                </a>
+                            </li>
+                            <li class="btn btn-link">
+                                <a href="about.html" class="btn-click magnetic">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner">About</span>
+                                </span>
+                                </a>
+                            </li>
+                            <li class="btn btn-link">
+                                <a href="contact.html" class="btn-click magnetic">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner">Contact</span>
+                                </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row social-row">
+                        <div class="stripe"></div>
+                        <div class="socials">
+                            <h5>Socials</h5>
+                            <ul>
+                                <li class="btn btn-link btn-link-external">
+                                    <a href="https://www.linkedin.com/in/aadarshrai1801/" target="_blank" rel="noopener" class="btn-click magnetic">
+                                        <span class="btn-text">
+                                            <span class="btn-text-inner">LinkedIn</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="btn btn-link btn-link-external">
+                                    <a href="https://github.com/Aadarshrai1801" target="_blank" rel="noopener" class="btn-click magnetic">
+                                        <span class="btn-text">
+                                            <span class="btn-text-inner">GitHub</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="btn btn-link btn-link-external">
+                                    <a href="mailto:aadarshrai1801@gmail.com" class="btn-click magnetic">
+                                        <span class="btn-text">
+                                            <span class="btn-text-inner">Email</span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-wrap">
+                <header class="section home-header theme-dark">
+                    <div class="hero-scale">
+                    <div class="overlay get-height">
+                        <div class="hanger">
+                            <p><span>Located </span><span>in </span><span>Dubai, UAE</span></p>
+                            <svg width="300px" height="121px" viewBox="0 0 300 121" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <title>Combined Shape</title>
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Artboard" transform="translate(0.000000, -366.000000)" fill="#1C1D20">
+                                        <g id="Group" transform="translate(149.816828, 426.633657) rotate(90.000000) translate(-149.816828, -426.633657) translate(89.816828, 276.816828)">
+                                            <g id="Hanger" transform="translate(60.000000, 149.816828) rotate(-90.000000) translate(-60.000000, -149.816828) translate(-89.816828, 89.816828)">
+                                                <path d="M239.633657,0 C272.770742,1.0182436e-15 299.633657,26.862915 299.633657,60 C299.633657,93.137085 272.770742,120 239.633657,120 L0,120 L0,0 L239.633657,0 Z M239.633657,18.7755102 C216.866,18.7755102 198.409167,37.232343 198.409167,60 C198.409167,82.767657 216.866,101.22449 239.633657,101.22449 C262.401314,101.22449 280.858147,82.767657 280.858147,60 C280.858147,37.232343 262.401314,18.7755102 239.633657,18.7755102 Z" id="Combined-Shape"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                            <div class="digital-ball">
+                                <div class="overlay"></div>
+                                <div class="globe">
+                                   <div class="globe-wrap">
+                                      <div class="circle"></div>
+                                      <div class="circle"></div>
+                                      <div class="circle"></div>
+                                      <div class="circle-hor"></div>
+                                      <div class="circle-hor-middle"></div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-bar">
+                        <div class="credits-top">
+                            <div class="btn btn-link btn-left-top">
+                                <a href="https://github.com/Aadarshrai1801" target="_blank" rel="noopener" class="btn-click magnetic">
+                                <span class="btn-text">
+                                    <div class="credit"><span>©</span></div><div class="cbd"><span class="code-by">Code by </span><span class="author">Aadarsh</span><span class="author-last"> Rai</span></div>
+                                </span>
+                                </a>
+                            </div>
+                        </div>
+                        <ul class="links-wrap">
+                            <li class="btn btn-link">
+                                <a href="work.html" class="btn-click magnetic">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner">Work</span>
+                                </span>
+                                </a>
+                            </li>
+                            <li class="btn btn-link">
+                                <a href="about.html" class="btn-click magnetic">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner">About</span>
+                                </span>
+                                </a>
+                            </li>
+                            <li class="btn btn-link">
+                                <a href="contact.html" class="btn-click magnetic">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner">Contact</span>
+                                </span>
+                                </a>
+                            </li>
+                            <li class="btn btn-link btn-menu">
+                                <div class="btn-click magnetic">
+                                    <div class="btn-text">
+                                        <span class="btn-text-inner">Menu</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="flex-col">
+                                <div class="header-above-h4 reveal">
+                                    <div class="arrow big"><!--?xml version="1.0" encoding="UTF-8"?-->
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>arrow-up-right</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-1019.000000, -279.000000)" stroke="#FFFFFF" stroke-width="1.5">
+            <g id="arrow-up-right" transform="translate(1026.000000, 286.000000) rotate(90.000000) translate(-1026.000000, -286.000000) translate(1020.000000, 280.000000)">
+                <polyline id="Path" points="2.76923077 0 12 0 12 9.23076923"></polyline>
+                <line x1="12" y1="0" x2="0" y2="12" id="Path"></line>
+            </g>
+        </g>
+    </g>
+</svg></div>
+                                </div>
+                                <h4 class="reveal"><span>AI &amp; Machine Learning</span> Engineer</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="big-name">
+                        <div class="name-h1">
+                            <div class="name-wrap">
+                                <h1 class="no-select">Aadarsh Rai<span class="spacer">—</span></h1>
+                            </div>
+                            <div class="name-wrap">
+                                <h1 class="no-select">Aadarsh Rai<span class="spacer">—</span></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="white-block"></div>
+                    </div>
+                </header>
+                <section class="section home-intro" id="about">
+                    <div class="container medium">
+                        <div class="row">
+                            <div class="flex-col">
+                                <h4 class="span-lines animate"><span class="span-line"><span class="span-line-inner">Building practical AI that</span></span><span class="span-line"><span class="span-line-inner">solves real-world problems.</span></span></h4>
+                            </div>
+                            <div class="flex-col">
+                                <div class="text-wrap reveal">
+                                    <p>I’m an aspiring AI and Machine Learning Engineer focused on building production-oriented machine learning systems and intelligent applications — from data collection and preprocessing to model training, evaluation, API development and deployment.</p>
+                                </div>
+                                <div class="btn-wrap-intro">
+                                    <div class="btn btn-round reveal">
+                                        <a href="about.html" class="btn-click magnetic">
+                                            <div class="btn-fill"></div>
+                                            <span class="btn-text">
+                                                <span class="btn-text-inner">About Me</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section work-grid large-work-grid" id="work">
+                    <div class="container">
+                        <div class="grid-sub-title reveal">
+                            <div class="flex-col">
+                                <h5>Recent work</h5>
+                            </div>
+                        </div>
+                        <ul class="work-items mouse-pos-list-image-wrap">
+                            <li data-project="marketpulse" class="reveal">
+                                <div class="stripe animate"></div>
+                                <a href="https://github.com/Aadarshrai1801/BazaarPulse" target="_blank" rel="noopener" class="row">
+                                    <div class="flex-col">
+                                        <h4><span>MarketPulse</span></h4>
+                                    </div>
+                                    <div class="flex-col animate">
+                                        <p>Data Engineering &amp; Development</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-project="plantix" class="reveal">
+                                <div class="stripe animate"></div>
+                                <a href="https://github.com/Aadarshrai1801/Plantix" target="_blank" rel="noopener" class="row">
+                                    <div class="flex-col">
+                                        <h4><span>Plantix</span></h4>
+                                    </div>
+                                    <div class="flex-col animate">
+                                        <p>Deep Learning &amp; Computer Vision</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-project="intellicast" class="reveal">
+                                <div class="stripe animate"></div>
+                                <a href="https://github.com/Aadarshrai1801/Intellicast" target="_blank" rel="noopener" class="row">
+                                    <div class="flex-col">
+                                        <h4><span>IntelliCast</span></h4>
+                                    </div>
+                                    <div class="flex-col animate">
+                                        <p>NLP, LLM &amp; RAG</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li data-project="quickshow" class="reveal">
+                                <div class="stripe animate"></div>
+                                <a href="https://github.com/Aadarshrai1801/QuickShow" target="_blank" rel="noopener" class="row">
+                                    <div class="flex-col">
+                                        <h4><span>QuickShow</span></h4>
+                                    </div>
+                                    <div class="flex-col animate">
+                                        <p>Full-Stack Development</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <div class="stripe last animate"></div>
+                        </ul>
+                    </div>
+                </section>
+                <section class="section work-tiles work-tiles-home">
+                    <div class="container">
+                        <ul>
+                            <li class="visible">
+                                <div class="single-tile-wrap">
+                                    <a href="https://github.com/Aadarshrai1801/BazaarPulse" target="_blank" rel="noopener" class="row">
+                                        <div class="flex-col">
+                                            <div class="tile-image">
+                                                <div class="overlay overlay-image" style="background-image: url(assets/work-marketpulse.svg); background-color: #0B1220; background-position: center center; background-repeat: no-repeat; background-size: cover;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-col">
+                                            <h4><span>MarketPulse</span></h4>
+                                            <div class="stripe"></div>
+                                        </div>
+                                        <div class="flex-col">
+                                            <p>Supermarket price intelligence</p>
+                                        </div>
+                                        <div class="flex-col">
+                                            <p>Python · MongoDB</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="visible">
+                                <div class="single-tile-wrap">
+                                    <a href="https://github.com/Aadarshrai1801/Plantix" target="_blank" rel="noopener" class="row">
+                                        <div class="flex-col">
+                                            <div class="tile-image">
+                                                <div class="overlay overlay-image" style="background-image: url(assets/work-plantix.svg); background-color: #06281A; background-position: center center; background-repeat: no-repeat; background-size: cover;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-col">
+                                            <h4><span>Plantix</span></h4>
+                                            <div class="stripe"></div>
+                                        </div>
+                                        <div class="flex-col">
+                                            <p>Plant disease detection</p>
+                                        </div>
+                                        <div class="flex-col">
+                                            <p>TensorFlow</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="visible">
+                                <div class="single-tile-wrap">
+                                    <a href="https://github.com/Aadarshrai1801/Intellicast" target="_blank" rel="noopener" class="row">
+                                        <div class="flex-col">
+                                            <div class="tile-image">
+                                                <div class="overlay overlay-image" style="background-image: url(assets/work-intellicast.svg); background-color: #17102E; background-position: center center; background-repeat: no-repeat; background-size: cover;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-col">
+                                            <h4><span>IntelliCast</span></h4>
+                                            <div class="stripe"></div>
+                                        </div>
+                                        <div class="flex-col">
+                                            <p>Medical AI assistant</p>
+                                        </div>
+                                        <div class="flex-col">
+                                            <p>Python · LLM</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="visible">
+                                <div class="single-tile-wrap">
+                                    <a href="https://github.com/Aadarshrai1801/QuickShow" target="_blank" rel="noopener" class="row">
+                                        <div class="flex-col">
+                                            <div class="tile-image">
+                                                <div class="overlay overlay-image" style="background-image: url(assets/work-quickshow.svg); background-color: #2A0A12; background-position: center center; background-repeat: no-repeat; background-size: cover;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-col">
+                                            <h4><span>QuickShow</span></h4>
+                                            <div class="stripe"></div>
+                                        </div>
+                                        <div class="flex-col">
+                                            <p>Movie ticket booking</p>
+                                        </div>
+                                        <div class="flex-col">
+                                            <p>MERN Stack</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="section center-grid-btn center-grid-btn-home">
+                    <div class="container">
+                        <div class="grid-after-btn reveal">
+                            <div class="btn btn-normal">
+                                <a href="work.html" class="btn-click magnetic">
+                                    <div class="btn-fill"></div>
+                                    <span class="btn-text">
+                                        <span class="btn-text-inner change">More work<div class="count-nr">4</div></span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="footer-rounded-div">
+                    <div class="rounded-div-wrap">
+                        <div class="rounded-div"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-spacer"></div>
+            <div class="footer-wrap footer-footer-wrap theme-dark" id="contact">
+                    <footer class="section footer">
+                        <div class="container medium">
+                            <div class="row">
+                                <div class="flex-col">
+                                    <div class="arrow"><!--?xml version="1.0" encoding="UTF-8"?-->
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>arrow-up-right</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-1019.000000, -279.000000)" stroke="#FFFFFF" stroke-width="1.5">
+            <g id="arrow-up-right" transform="translate(1026.000000, 286.000000) rotate(90.000000) translate(-1026.000000, -286.000000) translate(1020.000000, 280.000000)">
+                <polyline id="Path" points="2.76923077 0 12 0 12 9.23076923"></polyline>
+                <line x1="12" y1="0" x2="0" y2="12" id="Path"></line>
+            </g>
+        </g>
+    </g>
+</svg></div>
+                                    <h2><span><div class="profile-picture"></div> Let’s work  </span><span>together</span></h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="flex-col">
+                                    <div class="stripe"></div>
+                                    <div class="btn-fixed">
+                                        <div class="btn btn-round">
+                                            <a href="contact.html" class="btn-click magnetic">
+                                                <div class="btn-fill"></div>
+                                                <span class="btn-text">
+                                                    <span class="btn-text-inner">Get in touch</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="flex-col">
+                                    <div class="btn btn-normal">
+                                        <a href="mailto:aadarshrai1801@gmail.com" class="btn-click magnetic">
+                                        <div class="btn-fill"></div>
+                                        <span class="btn-text">
+                                            <span class="btn-text-inner change">aadarshrai1801@gmail.com</span>
+                                        </span>
+                                        </a>
+                                    </div>
+                                    <div class="btn btn-normal">
+                                        <a href="tel:+918434501384" class="btn-click magnetic">
+                                        <div class="btn-fill"></div>
+                                        <span class="btn-text">
+                                            <span class="btn-text-inner change">+91 8434501384</span>
+                                        </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container no-padding">
+                            <div class="row bottom-footer">
+                                <div class="flex-col">
+                                    <div class="credits">
+                                        <h5>Version</h5>
+                                        <p>2026 © Edition</p>
+                                    </div>
+                                    <div class="time">
+                                        <h5>Local time</h5>
+                                        <p><span id="timeSpan">--:-- GST</span></p>
+                                    </div>
+                                </div>
+                                <div class="flex-col">
+                                    <div class="socials">
+                                        <h5>Socials</h5>
+                                        <ul>
+                                            <li class="btn btn-link btn-link-external">
+                                                <a href="https://www.linkedin.com/in/aadarshrai1801/" target="_blank" rel="noopener" class="btn-click magnetic">
+                                                    <span class="btn-text">
+                                                        <span class="btn-text-inner">LinkedIn</span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="btn btn-link btn-link-external">
+                                                <a href="https://github.com/Aadarshrai1801" target="_blank" rel="noopener" class="btn-click magnetic">
+                                                    <span class="btn-text">
+                                                        <span class="btn-text-inner">GitHub</span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="btn btn-link btn-link-external">
+                                                <a href="mailto:aadarshrai1801@gmail.com" class="btn-click magnetic">
+                                                    <span class="btn-text">
+                                                        <span class="btn-text-inner">Email</span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="stripe"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                    <div class="overlay overlay-gradient"></div>
+                </div>
+        </main>
+
+        <script>
+        (function () {
+            'use strict';
+
+            var body = document.body;
+            var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            /* ---------- Loading screen & Page Transitions ---------- */
+            var loader = document.querySelector('.loading-container');
+            var loaderScreen = document.querySelector('.loading-screen');
+            var loaderWords = document.querySelector('.loading-words');
+            var words = loader ? loader.querySelectorAll('.loading-words h2') : [];
+            var sleep = function (ms) { return new Promise(function (r) { setTimeout(r, ms); }); };
+
+            function coverScreenInU(pageName) {
+                return new Promise(function (resolve) {
+                    if (!loader || reduceMotion) {
+                        return resolve();
+                    }
+                    loader.style.display = 'block';
+                    loader.style.pointerEvents = 'all';
+                    loader.style.zIndex = '10000';
+                    body.classList.add('loading');
+
+                    var allWords = loader.querySelectorAll('.loading-words h2');
+                    var targetWord = null;
+                    for (var i = 0; i < allWords.length; i++) {
+                        allWords[i].style.display = 'none';
+                        allWords[i].classList.remove('active');
+                        allWords[i].style.opacity = '0';
+                        if (!allWords[i].classList.contains('home-active')) {
+                            var txt = allWords[i].textContent.trim();
+                            if (txt.toLowerCase() === (pageName || '').toLowerCase()) {
+                                targetWord = allWords[i];
+                            }
+                        }
+                    }
+                    if (!targetWord) {
+                        targetWord = loader.querySelector('.loading-words h2:not(.home-active)') || allWords[0];
+                        if (targetWord) {
+                            targetWord.innerHTML = (pageName || '') + '<div class="dot"></div>';
+                        }
+                    }
+                    if (targetWord) {
+                        targetWord.style.display = 'block';
+                        targetWord.classList.add('active');
+                        targetWord.style.opacity = '0';
+                    }
+                    loaderWords.style.opacity = '1';
+
+                    var duration = 720;
+                    var screenHeight = loaderScreen.offsetHeight || window.innerHeight;
+                    var screenWidth = loaderScreen.offsetWidth || window.innerWidth;
+                    var depth = Math.min(screenWidth * 0.35, screenHeight * 0.45);
+                    var samples = 32;
+                    var startTime = null;
+
+                    var step = function (now) {
+                        if (startTime === null) { startTime = now; }
+                        var t = Math.min((now - startTime) / duration, 1);
+                        var eased = 1 - Math.pow(1 - t, 3);
+
+                        var curveFactor = Math.sin(t * Math.PI);
+                        var currentDepth = depth * (0.35 + 0.65 * curveFactor);
+                        var edge = (screenHeight + currentDepth) - eased * (screenHeight + currentDepth * 2.8);
+
+                        var points = [];
+                        for (var i = 0; i <= samples; i++) {
+                            var x = i / samples;
+                            // Opposite direction: dome arch leading upward
+                            var y = edge - currentDepth * 4 * x * (1 - x);
+                            points.push((x * 100).toFixed(2) + '% ' + y.toFixed(1) + 'px');
+                        }
+                        points.push('100% 100%', '0% 100%');
+                        loaderScreen.style.clipPath = 'polygon(' + points.join(', ') + ')';
+
+                        if (targetWord) {
+                            if (t < 0.22) {
+                                targetWord.style.opacity = '0';
+                            } else if (t < 0.65) {
+                                var progress = (t - 0.22) / 0.43;
+                                targetWord.style.opacity = progress.toFixed(3);
+                            } else {
+                                targetWord.style.opacity = '1';
+                            }
+                        }
+
+                        if (t < 1) {
+                            requestAnimationFrame(step);
+                        } else {
+                            loaderScreen.style.clipPath = 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)';
+                            if (targetWord) { targetWord.style.opacity = '1'; }
+                            resolve();
+                        }
+                    };
+                    requestAnimationFrame(step);
+                });
+            }
+
+            function collapseLoaderInU() {
+                return new Promise(function (resolve) {
+                    var duration = 950;
+                    var screenHeight = loaderScreen.offsetHeight || window.innerHeight;
+                    var screenWidth = loaderScreen.offsetWidth || window.innerWidth;
+                    var depth = Math.min(screenWidth * 0.35, screenHeight * 0.45);
+                    var samples = 32;
+                    var startTime = null;
+
+                    var heroScaleEl = document.querySelector('.home-header .hero-scale');
+                    var heroBigName = document.querySelector('.home-header .big-name');
+
+                    if (heroScaleEl) {
+                        heroScaleEl.style.transition = 'none';
+                        heroScaleEl.style.transformOrigin = '50% 100%';
+                    }
+
+                    var activeWord = loader ? (loader.querySelector('.loading-words h2.active') || loader.querySelector('.loading-words h2:not([style*="display: none"])')) : null;
+
+                    var step = function (now) {
+                        if (startTime === null) { startTime = now; }
+                        var t = Math.min((now - startTime) / duration, 1);
+                        var eased = 1 - Math.pow(1 - t, 3);
+
+                        // Elastic U curve: dynamic depth that arcs fluidly and flattens at exit
+                        var curveFactor = Math.sin(t * Math.PI);
+                        var currentDepth = depth * (0.35 + 0.65 * curveFactor);
+                        var edge = (screenHeight + currentDepth) - eased * (screenHeight + currentDepth * 2.8);
+
+                        var points = [];
+                        for (var i = 0; i <= samples; i++) {
+                            var x = i / samples;
+                            var y = edge + currentDepth * 4 * x * (1 - x);
+                            points.push(
+                                (x * 100).toFixed(2) + '% ' + y.toFixed(1) + 'px'
+                            );
+                        }
+                        points.push('100% 0%', '0% 0%');
+                        loaderScreen.style.clipPath = 'polygon(' + points.join(', ') + ')';
+
+                        if (activeWord && t > 0.1) {
+                            activeWord.style.opacity = Math.max(0, 1 - (t - 0.1) * 3.5).toFixed(3);
+                        }
+
+                        // Hero section expands in sync with the U-curve from below to up
+                        if (heroScaleEl) {
+                            var liftY = (1 - eased) * 160;
+                            var scaleVal = 0.88 + eased * 0.12;
+                            heroScaleEl.style.transform = 'translate3d(0, ' + liftY.toFixed(2) + 'px, 0) scale(' + scaleVal.toFixed(4) + ')';
+                        }
+                        if (heroBigName) {
+                            var nameLiftY = (1 - eased) * 90;
+                            heroBigName.style.transform = 'translate3d(0, ' + nameLiftY.toFixed(2) + 'px, 0)';
+                        }
+
+                        if (t < 1) {
+                            requestAnimationFrame(step);
+                        } else {
+                            if (heroScaleEl) {
+                                heroScaleEl.style.transform = '';
+                                heroScaleEl.style.transition = '';
+                            }
+                            if (heroBigName) {
+                                heroBigName.style.transform = '';
+                            }
+                            loaderScreen.style.clipPath = '';
+                            loader.style.display = 'none';
+                            loader.style.pointerEvents = 'none';
+                            loader.style.zIndex = '';
+                            body.classList.remove('loading');
+                            if (activeWord) {
+                                activeWord.style.display = 'none';
+                                activeWord.classList.remove('active');
+                            }
+                            resolve();
+                        }
+                    };
+                    requestAnimationFrame(step);
+                });
+            }
+
+            function playHomePageAnimation() {
+                if (!loader || reduceMotion) {
+                    if (loader) { loader.style.display = 'none'; }
+                    body.classList.remove('loading');
+                    body.classList.add('hero-reveal');
+                    document.documentElement.classList.remove('page-transitioning');
+                    return Promise.resolve();
+                }
+
+                loader.style.display = 'block';
+                loader.style.pointerEvents = 'all';
+                loader.style.zIndex = '10000';
+                loaderScreen.style.clipPath = 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)';
+                body.classList.add('loading');
+
+                var allWords = loader.querySelectorAll('.loading-words h2');
+                Array.prototype.forEach.call(allWords, function (w) {
+                    w.style.display = 'none';
+                    w.style.opacity = '0';
+                    w.classList.remove('active');
+                });
+
+                var homeWord = null;
+                for (var i = 0; i < allWords.length; i++) {
+                    if (!allWords[i].classList.contains('home-active') && allWords[i].textContent.trim().toLowerCase() === 'home') {
+                        homeWord = allWords[i];
+                        break;
+                    }
+                }
+                if (!homeWord) {
+                    homeWord = loader.querySelector('.loading-words h2:not(.home-active)') || allWords[0];
+                    if (homeWord) { homeWord.innerHTML = 'Home<div class="dot"></div>'; }
+                }
+                if (homeWord) {
+                    homeWord.style.display = 'block';
+                    homeWord.classList.add('active');
+                    homeWord.style.opacity = '1';
+                }
+                loaderWords.style.opacity = '1';
+
+                return sleep(260).then(function () {
+                    body.classList.add('hero-reveal');
+                    return collapseLoaderInU();
+                }).then(function () {
+                    loader.style.display = 'none';
+                    loader.style.pointerEvents = 'none';
+                    body.classList.remove('loading');
+                    document.documentElement.classList.remove('page-transitioning');
+                });
+            }
+
+            function runLoader() {
+                if (!loader || reduceMotion) {
+                    if (loader) { loader.style.display = 'none'; }
+                    body.classList.remove('loading');
+                    body.classList.add('hero-reveal');
+                    document.documentElement.classList.remove('page-transitioning');
+                    return Promise.resolve();
+                }
+
+                var navEntry = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+                var isReload = navEntry ? navEntry.type === 'reload' : (performance.navigation && performance.navigation.type === 1);
+                var isBackForward = navEntry ? navEntry.type === 'back_forward' : (performance.navigation && performance.navigation.type === 2);
+
+                var transitionParam = null;
+                try {
+                    var urlParams = new URLSearchParams(window.location.search);
+                    transitionParam = urlParams.get('transition');
+                } catch (e) {}
+
+                try {
+                    if (!transitionParam && !isReload) {
+                        transitionParam = sessionStorage.getItem('pageTransition');
+                    }
+                    sessionStorage.removeItem('pageTransition');
+                } catch (e) {}
+
+                // If coming from another page on this site (e.g. via back button or server redirect)
+                if (!transitionParam && !isReload && document.referrer) {
+                    try {
+                        var refUrl = new URL(document.referrer);
+                        if (refUrl.origin === window.location.origin) {
+                            var refPath = refUrl.pathname.toLowerCase();
+                            if (refPath.indexOf('work') !== -1 || refPath.indexOf('about') !== -1 || refPath.indexOf('contact') !== -1) {
+                                transitionParam = 'Home';
+                            }
+                        }
+                    } catch (e) {}
+                }
+
+                try {
+                    var cleanUrl = window.location.pathname + (window.location.hash || '');
+                    history.replaceState(null, '', cleanUrl);
+                } catch (e) {}
+
+                // If navigating to Home from another page or via browser back/forward: do Home page animation
+                if (isBackForward || (transitionParam && transitionParam.toLowerCase() === 'home')) {
+                    return playHomePageAnimation();
+                }
+
+                var allWords = loader.querySelectorAll('.loading-words h2');
+                Array.prototype.forEach.call(allWords, function (w) {
+                    w.style.display = 'none';
+                    w.style.opacity = '0';
+                    w.classList.remove('active');
+                });
+
+                loaderWords.style.opacity = '1';
+
+                // Initial visit or page reload on Home: ALWAYS play the welcome animation
+                var greetingWords = loader.querySelectorAll('.loading-words h2.home-active');
+                var chain = Promise.resolve();
+                var greetingArray = Array.prototype.slice.call(greetingWords);
+
+                greetingArray.forEach(function (word, index) {
+                    var isLast = (index === greetingArray.length - 1);
+                    chain = chain.then(function () {
+                        word.style.display = 'block';
+                        word.style.transition = 'opacity .11s ease';
+                        word.style.opacity = '1';
+                        word.classList.add('active');
+
+                        if (isLast) {
+                            // "Namaste" is the final greeting — hold it before U-curve reveal
+                            return sleep(300);
+                        } else {
+                            return sleep(120).then(function () {
+                                word.style.opacity = '0';
+                                return sleep(60);
+                            }).then(function () {
+                                word.style.display = 'none';
+                                word.classList.remove('active');
+                            });
+                        }
+                    });
+                });
+
+                return chain.then(function () {
+                    body.classList.add('hero-reveal');
+                    return collapseLoaderInU();
+                }).then(function () {
+                    loader.style.display = 'none';
+                    loader.style.pointerEvents = 'none';
+                    body.classList.remove('loading');
+                    document.documentElement.classList.remove('page-transitioning');
+                });
+            }
+
+            function initPageTransitions() {
+                var isTransitioning = false;
+
+                window.addEventListener('pageshow', function (e) {
+                    isTransitioning = false;
+                    if (e.persisted) {
+                        playHomePageAnimation();
+                    }
+                });
+
+                document.addEventListener('click', function (e) {
+                    var link = e.target.closest('a');
+                    if (!link) return;
+
+                    var href = link.getAttribute('href');
+                    if (!href) return;
+
+                    if (link.target === '_blank' || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:')) {
+                        return;
+                    }
+                    if (href.startsWith('http://') || href.startsWith('https://')) {
+                        try {
+                            var url = new URL(href, window.location.origin);
+                            if (url.origin !== window.location.origin) return;
+                        } catch (err) {
+                            return;
+                        }
+                    }
+
+                    var pageName = 'Home';
+                    var lowerHref = href.toLowerCase();
+
+                    if (lowerHref.indexOf('about.html') !== -1) {
+                        pageName = 'About';
+                    } else if (lowerHref.indexOf('work') !== -1) {
+                        pageName = 'Work';
+                    } else if (lowerHref.indexOf('contact') !== -1) {
+                        pageName = 'Contact';
+                    } else if (lowerHref.indexOf('home') !== -1 || lowerHref === 'index.html' || lowerHref === './' || lowerHref === '/') {
+                        pageName = 'Home';
+                    } else {
+                        var text = (link.querySelector('.btn-text-inner') || link).textContent.trim();
+                        if (text) pageName = text;
+                    }
+
+                    var currentPath = window.location.pathname.split('/').pop() || 'index.html';
+                    var isHashOnly = false;
+
+                    if (href.startsWith('#')) {
+                        isHashOnly = true;
+                    } else {
+                        try {
+                            var parsedUrl = new URL(href, window.location.href);
+                            var targetPath = parsedUrl.pathname.split('/').pop() || 'index.html';
+                            if (targetPath === currentPath && parsedUrl.hash) {
+                                isHashOnly = true;
+                                href = parsedUrl.hash;
+                            }
+                        } catch (err) {}
+                    }
+
+                    e.preventDefault();
+                    if (isTransitioning) return;
+                    isTransitioning = true;
+
+                    if (body.classList.contains('nav-active')) {
+                        body.classList.remove('nav-active');
+                        var hamburger = document.querySelector('.btn-hamburger');
+                        if (hamburger) hamburger.classList.remove('active');
+                    }
+
+                    coverScreenInU(pageName).then(function () {
+                        if (isHashOnly) {
+                            var hash = href;
+                            var targetElem = hash === '#home' ? document.documentElement : document.querySelector(hash);
+                            if (targetElem) {
+                                targetElem.scrollIntoView({ behavior: 'auto' });
+                                history.pushState(null, '', hash);
+                            }
+                            setTimeout(function () {
+                                collapseLoaderInU().then(function () {
+                                    isTransitioning = false;
+                                });
+                            }, 100);
+                        } else {
+                            try {
+                                sessionStorage.setItem('pageTransition', pageName);
+                            } catch (e) {}
+                            var destUrl;
+                            try {
+                                destUrl = new URL(href, window.location.href);
+                                destUrl.searchParams.set('transition', pageName);
+                                window.location.href = destUrl.toString();
+                            } catch (err) {
+                                window.location.href = href;
+                            }
+                        }
+                    });
+                });
+            }
+
+            /* ---------- Reveal on scroll ---------- */
+            function initReveals() {
+                var targets = document.querySelectorAll('.reveal, .span-lines');
+                var spanLines = document.querySelectorAll('.span-lines');
+
+                if (!('IntersectionObserver' in window)) {
+                    Array.prototype.forEach.call(targets, function (el) { el.classList.add('in-view'); });
+                    return;
+                }
+
+                spanLines.forEach(function (group) {
+                    group.querySelectorAll('.span-line-inner').forEach(function (span, i) {
+                        span.style.transitionDelay = (i * 0.12) + 's';
+                    });
+                });
+
+                var io = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        var el = entry.target;
+                        if (entry.isIntersecting) {
+                            el.classList.add('in-view');
+                            if (!el.classList.contains('span-lines')) {
+                                io.unobserve(el);
+                            }
+                        } else {
+                            if (el.classList.contains('span-lines') && entry.boundingClientRect.top > 0) {
+                                el.classList.remove('in-view');
+                            }
+                        }
+                    });
+                }, { threshold: [0, 0.1], rootMargin: '0px 0px -5% 0px' });
+
+                Array.prototype.forEach.call(targets, function (el) { io.observe(el); });
+
+                window.addEventListener('scroll', function () {
+                    var winH = window.innerHeight;
+                    spanLines.forEach(function (el) {
+                        var rect = el.getBoundingClientRect();
+                        if (rect.top > winH && el.classList.contains('in-view')) {
+                            el.classList.remove('in-view');
+                        }
+                    });
+                }, { passive: true });
+            }
+
+            /* ---------- Menu ---------- */
+            function initMenu() {
+                var main = document.querySelector('main');
+                var hamburger = document.querySelector('.btn-hamburger');
+                var openers = document.querySelectorAll('.btn-hamburger .btn-click, .btn-menu .btn-click');
+                var setMenu = function (open) {
+                    body.classList.toggle('nav-active', open);
+                    if (hamburger) { hamburger.classList.toggle('active', open); }
+                };
+                Array.prototype.forEach.call(openers, function (btn) {
+                    btn.addEventListener('click', function () {
+                        setMenu(!body.classList.contains('nav-active'));
+                    });
+                });
+                Array.prototype.forEach.call(document.querySelectorAll('.fixed-nav a'), function (link) {
+                    link.addEventListener('click', function () { setMenu(false); });
+                });
+                var back = document.querySelector('.fixed-nav-back');
+                if (back) {
+                    back.addEventListener('click', function () { setMenu(false); });
+                }
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape') { setMenu(false); }
+                });
+                var onScroll = function () {
+                    if (main) { main.classList.toggle('scrolled', window.scrollY > 60); }
+                };
+                window.addEventListener('scroll', onScroll, { passive: true });
+                onScroll();
+            }
+
+            /* ---------- Local time (Dubai) ---------- */
+            function initTime() {
+                var el = document.getElementById('timeSpan');
+                if (!el) { return; }
+                var format = function () {
+                    try {
+                        return new Intl.DateTimeFormat('en-GB', {
+                            hour: '2-digit', minute: '2-digit', hour12: true, timeZone: 'Asia/Dubai'
+                        }).format(new Date()).toLowerCase() + ' GST';
+                    } catch (err) {
+                        return new Date().toLocaleTimeString() + ' GST';
+                    }
+                };
+                el.textContent = format();
+                setInterval(function () { el.textContent = format(); }, 15000);
+            }
+
+            /* ---------- Dennis Snellenberg Floating Work Preview & "View" Badge ---------- */
+            function initWorkHover() {
+                var imageContainer = document.querySelector('.mouse-pos-list-image');
+                var btnContainer = document.querySelector('.mouse-pos-list-btn');
+                var spanContainer = document.querySelector('.mouse-pos-list-span');
+                var rows = document.querySelectorAll('.work-items li[data-project]');
+                if (!imageContainer || !rows.length) { return; }
+
+                var items = imageContainer.querySelectorAll('.mouse-pos-list-image-inner');
+                var active = false;
+
+                var mouseX = window.innerWidth / 2;
+                var mouseY = window.innerHeight / 2;
+                var prevMouseX = mouseX;
+
+                var imgX = mouseX;
+                var imgY = mouseY;
+                var imgRotate = 0;
+
+                var btnX = mouseX;
+                var btnY = mouseY;
+
+                var rafId = null;
+
+                var render = function () {
+                    // Smooth spring lag (lerp)
+                    imgX += (mouseX - imgX) * 0.14;
+                    imgY += (mouseY - imgY) * 0.14;
+
+                    // Horizontal velocity banking tilt
+                    var vx = mouseX - prevMouseX;
+                    prevMouseX = mouseX;
+                    var targetRotate = Math.max(-14, Math.min(14, vx * 0.45));
+                    imgRotate += (targetRotate - imgRotate) * 0.12;
+
+                    btnX += (mouseX - btnX) * 0.22;
+                    btnY += (mouseY - btnY) * 0.22;
+
+                    imageContainer.style.left = imgX.toFixed(2) + 'px';
+                    imageContainer.style.top = imgY.toFixed(2) + 'px';
+                    imageContainer.style.transform = 'translate(-50%, -52%) rotate(' + imgRotate.toFixed(2) + 'deg)';
+
+                    if (btnContainer) {
+                        btnContainer.style.left = btnX.toFixed(2) + 'px';
+                        btnContainer.style.top = btnY.toFixed(2) + 'px';
+                    }
+                    if (spanContainer) {
+                        spanContainer.style.left = btnX.toFixed(2) + 'px';
+                        spanContainer.style.top = btnY.toFixed(2) + 'px';
+                    }
+
+                    if (active || Math.abs(mouseX - imgX) > 0.4 || Math.abs(mouseY - imgY) > 0.4 || Math.abs(imgRotate) > 0.1) {
+                        rafId = requestAnimationFrame(render);
+                    } else {
+                        rafId = null;
+                    }
+                };
+
+                var startRender = function () {
+                    if (!rafId) {
+                        rafId = requestAnimationFrame(render);
+                    }
+                };
+
+                document.addEventListener('mousemove', function (e) {
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                    if (active) {
+                        startRender();
+                    }
+                }, { passive: true });
+
+                Array.prototype.forEach.call(rows, function (row) {
+                    row.addEventListener('mouseenter', function () {
+                        var project = row.getAttribute('data-project');
+                        Array.prototype.forEach.call(items, function (item) {
+                            item.classList.toggle('visible', item.getAttribute('data-project') === project);
+                        });
+                        active = true;
+                        imageContainer.classList.add('active');
+                        if (btnContainer) { btnContainer.classList.add('active'); }
+                        if (spanContainer) { spanContainer.classList.add('active'); }
+                        startRender();
+                    });
+
+                    row.addEventListener('mouseleave', function () {
+                        active = false;
+                        imageContainer.classList.remove('active');
+                        if (btnContainer) { btnContainer.classList.remove('active'); }
+                        if (spanContainer) { spanContainer.classList.remove('active'); }
+                    });
+                });
+            }
+
+            /* ---------- Dennis Snellenberg Magnetic Buttons with 3D Text Parallax ---------- */
+            function initMagneticButtons() {
+                if (reduceMotion) { return; }
+                var buttons = document.querySelectorAll('.btn-click.magnetic, .btn-click');
+                Array.prototype.forEach.call(buttons, function (btn) {
+                    var text = btn.querySelector('.btn-text');
+                    var frame = null;
+
+                    var shiftX = 0;
+                    var shiftY = 0;
+                    var rotate = 0;
+                    var scale = 1;
+
+                    var targetShiftX = 0;
+                    var targetShiftY = 0;
+                    var targetRotate = 0;
+                    var targetScale = 1;
+
+                    var textX = 0;
+                    var textY = 0;
+                    var targetTextX = 0;
+                    var targetTextY = 0;
+
+                    var isHovered = false;
+
+                    var tick = function () {
+                        // Spring interpolation
+                        shiftX += (targetShiftX - shiftX) * 0.22;
+                        shiftY += (targetShiftY - shiftY) * 0.22;
+                        rotate += (targetRotate - rotate) * 0.18;
+                        scale += (targetScale - scale) * 0.18;
+
+                        btn.style.transform = 'translate3d(' + shiftX.toFixed(2) + 'px,' +
+                            shiftY.toFixed(2) + 'px,0) rotate(' + rotate.toFixed(2) +
+                            'deg) scale(' + scale.toFixed(3) + ')';
+
+                        if (text) {
+                            textX += (targetTextX - textX) * 0.24;
+                            textY += (targetTextY - textY) * 0.24;
+                            text.style.transform = 'translate3d(' + textX.toFixed(2) + 'px,' +
+                                textY.toFixed(2) + 'px,0)';
+                        }
+
+                        var settled =
+                            Math.abs(targetShiftX - shiftX) < 0.05 &&
+                            Math.abs(targetShiftY - shiftY) < 0.05 &&
+                            Math.abs(targetRotate - rotate) < 0.02 &&
+                            Math.abs(targetScale - scale) < 0.002 &&
+                            Math.abs(targetTextX - textX) < 0.05 &&
+                            Math.abs(targetTextY - textY) < 0.05;
+
+                        if (!settled || isHovered) {
+                            frame = requestAnimationFrame(tick);
+                        } else {
+                            frame = null;
+                            if (targetShiftX === 0 && targetShiftY === 0 && targetRotate === 0 && targetScale === 1) {
+                                btn.style.transform = '';
+                            }
+                            if (text && targetTextX === 0 && targetTextY === 0) {
+                                text.style.transform = '';
+                            }
+                        }
+                    };
+
+                    var start = function () {
+                        if (frame === null) { frame = requestAnimationFrame(tick); }
+                    };
+
+                    btn.addEventListener('mouseenter', function () {
+                        isHovered = true;
+                        targetScale = 1.05;
+                        if (btn.closest('.btn-left-top')) {
+                            targetRotate = -2.5;
+                            targetShiftX = 2;
+                            targetShiftY = -1;
+                        }
+                        start();
+                    });
+
+                    btn.addEventListener('mousemove', function (e) {
+                        var rect = btn.getBoundingClientRect();
+                        var centerX = rect.left + rect.width / 2;
+                        var centerY = rect.top + rect.height / 2;
+                        var dx = e.clientX - centerX;
+                        var dy = e.clientY - centerY;
+
+                        // Physical magnetic pull toward cursor
+                        targetShiftX = Math.max(-18, Math.min(18, dx * 0.38));
+                        targetShiftY = Math.max(-18, Math.min(18, dy * 0.38));
+                        targetRotate = Math.max(-7, Math.min(7, dx * 0.08));
+                        targetScale = Math.max(1.03, Math.min(1.12, 1.05 + Math.hypot(dx, dy) * 0.001));
+
+                        // 3D secondary text parallax
+                        targetTextX = Math.max(-12, Math.min(12, dx * 0.22));
+                        targetTextY = Math.max(-12, Math.min(12, dy * 0.22));
+
+                        start();
+                    });
+
+                    btn.addEventListener('mouseleave', function () {
+                        isHovered = false;
+                        targetShiftX = 0;
+                        targetShiftY = 0;
+                        targetRotate = 0;
+                        targetScale = 1;
+                        targetTextX = 0;
+                        targetTextY = 0;
+                        start();
+                    });
+                });
+            }
+
+            /* ---------- Hero name marquee (reverses with scroll) ---------- */
+            function initNameScroll() {
+                var name = document.querySelector('.home-header .big-name .name-h1');
+                if (!name) { return; }
+
+                var position = 0;
+                var direction = -1;
+                var speed = 1;
+                var boost = 0;
+                var lastScrollY = window.scrollY;
+                var lastTime = performance.now();
+
+                var measure = function () {
+                    var half = name.scrollWidth / 2;
+                    speed = half > 0 ? half / 26000 : 1;
+                };
+                measure();
+                window.addEventListener('resize', measure);
+
+                window.addEventListener('scroll', function () {
+                    var y = window.scrollY;
+                    var delta = Math.abs(y - lastScrollY);
+                    if (y > lastScrollY + 1) {
+                        direction = -1;
+                    } else if (y < lastScrollY - 1) {
+                        direction = 1;
+                    }
+                    if (delta > 0) {
+                        boost = Math.min(6, boost + delta * 0.35);
+                    }
+                    lastScrollY = y;
+                }, { passive: true });
+
+                var tick = function (now) {
+                    var dt = Math.min(now - lastTime, 48);
+                    lastTime = now;
+                    position += direction * speed * (1 + boost) * dt;
+                    boost *= Math.pow(0.985, dt / 16);
+                    if (boost < 0.01) { boost = 0; }
+                    var half = name.scrollWidth / 2;
+                    if (half > 0) {
+                        if (position <= -half) { position += half; }
+                        if (position > 0) { position -= half; }
+                    }
+                    name.style.transform = 'translateX(' + position.toFixed(2) + 'px)';
+                    requestAnimationFrame(tick);
+                };
+                requestAnimationFrame(tick);
+            }
+
+            /* ---------- Parallax About Me button in intro ---------- */
+            function initIntroParallax() {
+                var section = document.querySelector('.home-intro');
+                var wrap = section ? section.querySelector('.btn-wrap-intro') : null;
+                if (!section || !wrap) { return; }
+
+                var ticking = false;
+                var update = function () {
+                    var rect = section.getBoundingClientRect();
+                    var winH = window.innerHeight;
+                    var total = winH * 0.85 + rect.height * 0.5;
+                    var visible = winH - rect.top;
+                    var t = Math.max(0, Math.min(1, visible / total));
+
+                    var startDist = 110;
+                    var endDist = -105;
+                    var translateY = startDist + (endDist - startDist) * t;
+
+                    wrap.style.transform = 'translate3d(0, ' + translateY.toFixed(2) + 'px, 0)';
+                    ticking = false;
+                };
+
+                window.addEventListener('scroll', function () {
+                    if (!ticking) {
+                        requestAnimationFrame(update);
+                        ticking = true;
+                    }
+                }, { passive: true });
+
+                window.addEventListener('resize', update);
+                update();
+            }
+
+            /* ---------- Dennis Snellenberg Footer Overlap & Vertical Scroll Parallax ---------- */
+            function initFooterCurveScroll() {
+                var spacer = document.querySelector('.footer-spacer');
+                var footerWrap = document.querySelector('.footer-wrap');
+                var roundedWrap = document.querySelector('.footer-rounded-div .rounded-div-wrap');
+                var footerEl = footerWrap ? footerWrap.querySelector('.footer') : null;
+                var headingEl = footerWrap ? footerWrap.querySelector('.container.medium .row:nth-child(1) h2') : null;
+                var btnFixed = footerWrap ? footerWrap.querySelector('.btn-fixed') : null;
+                var row = footerWrap ? footerWrap.querySelector('.container.medium .row:nth-child(2)') : null;
+                var arrowEl = footerWrap ? footerWrap.querySelector('.arrow') : null;
+
+                if (!footerWrap || !spacer) { return; }
+
+                var currentProgress = 0;
+                var targetProgress = 0;
+                var rafId = null;
+
+                var updateSpacer = function () {
+                    var winH = window.innerHeight;
+                    var footerH = footerEl ? footerEl.offsetHeight : 0;
+                    spacer.style.height = Math.max(winH * 0.9, footerH) + 'px';
+                };
+
+                var calculateTarget = function () {
+                    var rect = spacer.getBoundingClientRect();
+                    var winH = window.innerHeight;
+                    var spacerH = rect.height || winH;
+                    var scrolledIntoSpacer = winH - rect.top;
+                    targetProgress = Math.max(0, Math.min(1, scrolledIntoSpacer / spacerH));
+
+                    if (scrolledIntoSpacer > -40) {
+                        footerWrap.classList.add('visible');
+                    } else {
+                        footerWrap.classList.remove('visible');
+                    }
+
+                    if (!rafId) {
+                        rafId = requestAnimationFrame(render);
+                    }
+                };
+
+                var render = function () {
+                    // Fluid physics damping on vertical scroll
+                    var diff = targetProgress - currentProgress;
+                    if (Math.abs(diff) > 0.0005) {
+                        currentProgress += diff * 0.14;
+                    } else {
+                        currentProgress = targetProgress;
+                    }
+
+                    var p = currentProgress;
+
+                    // 1. Sleek curve that flattens from 8vh to 0 on scroll down, expands back on scroll up
+                    if (roundedWrap) {
+                        var curveHeight = (1 - p) * 8;
+                        roundedWrap.style.height = Math.max(0, curveHeight).toFixed(2) + 'vh';
+                    }
+
+                    // 2. Vertical scroll parallax on footer - rises 280px vertically with scroll
+                    if (footerEl) {
+                        var footerTranslateY = (1 - p) * 280;
+                        footerEl.style.transform = 'translate3d(0, ' + footerTranslateY.toFixed(2) + 'px, 0)';
+                    }
+
+                    // 3. Secondary vertical scroll parallax on heading ("Let's work together")
+                    if (headingEl) {
+                        var headingY = (1 - p) * 60;
+                        headingEl.style.transform = 'translate3d(0, ' + headingY.toFixed(2) + 'px, 0)';
+                    }
+
+                    // 4. Arrow rotation with vertical scroll
+                    if (arrowEl) {
+                        var arrowRot = (1 - p) * 15;
+                        arrowEl.style.transform = 'rotate(' + arrowRot.toFixed(1) + 'deg)';
+                    }
+
+                    // 5. "Get in touch" button responds to both vertical and horizontal scroll
+                    if (btnFixed && row) {
+                        var rowWidth = row.offsetWidth;
+                        var maxShiftLeft = Math.min(rowWidth * 0.35, 400);
+                        var shiftX = -maxShiftLeft * (1 - Math.pow(p, 0.85));
+                        var btnVerticalY = (1 - p) * 45; // vertical scroll float
+                        var tilt = (1 - p) * -10;
+
+                        btnFixed.style.transform = 'translate3d(calc(-50% + ' + shiftX.toFixed(1) + 'px), calc(-50% + ' + btnVerticalY.toFixed(1) + 'px), 0) rotate(' + tilt.toFixed(1) + 'deg)';
+                    }
+
+                    if (Math.abs(targetProgress - currentProgress) > 0.0005) {
+                        rafId = requestAnimationFrame(render);
+                    } else {
+                        rafId = null;
+                    }
+                };
+
+                window.addEventListener('scroll', function () {
+                    calculateTarget();
+                }, { passive: true });
+
+                window.addEventListener('resize', function () {
+                    updateSpacer();
+                    calculateTarget();
+                });
+
+                updateSpacer();
+                calculateTarget();
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                window.scrollTo(0, 0);
+                initPageTransitions();
+                runLoader().then(initReveals);
+                initMenu();
+                initTime();
+                initWorkHover();
+                initMagneticButtons();
+                initNameScroll();
+                initIntroParallax();
+                initFooterCurveScroll();
+            });
+        })();
+        </script>
+    </body>
+</html>
