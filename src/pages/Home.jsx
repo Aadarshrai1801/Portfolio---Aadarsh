@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTransition } from '../context/TransitionContext';
+import { PROJECTS } from '../data/projects';
 
 export default function Home() {
   const { navigateTo } = useTransition();
@@ -9,54 +10,20 @@ export default function Home() {
       <div className="mouse-pos-list-image no-select">
         <div className="mouse-pos-list-image-bounce overlay">
           <div className="float-image-wrap">
-            <li className="mouse-pos-list-image-inner" data-project="marketpulse">
-              <div
-                className="overlay overlay-image"
-                style={{
-                  backgroundImage: 'url(/assets/work-marketpulse.svg)',
-                  backgroundPosition: 'center center',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundSize: 'cover',
-                  backgroundColor: '#0B1220'
-                }}
-              ></div>
-            </li>
-            <li className="mouse-pos-list-image-inner" data-project="plantix">
-              <div
-                className="overlay overlay-image"
-                style={{
-                  backgroundImage: 'url(/assets/work-plantix.svg)',
-                  backgroundPosition: 'center center',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundSize: 'cover',
-                  backgroundColor: '#06281A'
-                }}
-              ></div>
-            </li>
-            <li className="mouse-pos-list-image-inner" data-project="intellicast">
-              <div
-                className="overlay overlay-image"
-                style={{
-                  backgroundImage: 'url(/assets/work-intellicast.svg)',
-                  backgroundPosition: 'center center',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundSize: 'cover',
-                  backgroundColor: '#17102E'
-                }}
-              ></div>
-            </li>
-            <li className="mouse-pos-list-image-inner" data-project="quickshow">
-              <div
-                className="overlay overlay-image"
-                style={{
-                  backgroundImage: 'url(/assets/work-quickshow.svg)',
-                  backgroundPosition: 'center center',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundSize: 'cover',
-                  backgroundColor: '#2A0A12'
-                }}
-              ></div>
-            </li>
+            {PROJECTS.map((p) => (
+              <li key={p.id} className="mouse-pos-list-image-inner" data-project={p.id}>
+                <div
+                  className="overlay overlay-image"
+                  style={{
+                    backgroundImage: `url(${p.image})`,
+                    backgroundPosition: 'center center',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'cover',
+                    backgroundColor: p.bgColor
+                  }}
+                ></div>
+              </li>
+            ))}
           </div>
         </div>
       </div>
@@ -190,50 +157,19 @@ export default function Home() {
               </div>
             </div>
             <ul className="work-items mouse-pos-list-image-wrap">
-              <li data-project="marketpulse" className="reveal">
-                <div className="stripe animate"></div>
-                <a href="https://github.com/Aadarshrai1801/BazaarPulse" target="_blank" rel="noopener noreferrer" className="row">
-                  <div className="flex-col">
-                    <h4><span>MarketPulse</span></h4>
-                  </div>
-                  <div className="flex-col animate">
-                    <p>Data Engineering &amp; Development</p>
-                  </div>
-                </a>
-              </li>
-              <li data-project="plantix" className="reveal">
-                <div className="stripe animate"></div>
-                <a href="https://github.com/Aadarshrai1801/Plantix" target="_blank" rel="noopener noreferrer" className="row">
-                  <div className="flex-col">
-                    <h4><span>Plantix</span></h4>
-                  </div>
-                  <div className="flex-col animate">
-                    <p>Deep Learning &amp; Computer Vision</p>
-                  </div>
-                </a>
-              </li>
-              <li data-project="intellicast" className="reveal">
-                <div className="stripe animate"></div>
-                <a href="https://github.com/Aadarshrai1801/Intellicast" target="_blank" rel="noopener noreferrer" className="row">
-                  <div className="flex-col">
-                    <h4><span>IntelliCast</span></h4>
-                  </div>
-                  <div className="flex-col animate">
-                    <p>NLP, LLM &amp; RAG</p>
-                  </div>
-                </a>
-              </li>
-              <li data-project="quickshow" className="reveal">
-                <div className="stripe animate"></div>
-                <a href="https://github.com/Aadarshrai1801/QuickShow" target="_blank" rel="noopener noreferrer" className="row">
-                  <div className="flex-col">
-                    <h4><span>QuickShow</span></h4>
-                  </div>
-                  <div className="flex-col animate">
-                    <p>Full-Stack Development</p>
-                  </div>
-                </a>
-              </li>
+              {PROJECTS.map((p) => (
+                <li key={p.id} data-project={p.id} className="reveal">
+                  <div className="stripe animate"></div>
+                  <a href={p.link} target="_blank" rel="noopener noreferrer" className="row">
+                    <div className="flex-col">
+                      <h4><span>{p.title}</span></h4>
+                    </div>
+                    <div className="flex-col animate">
+                      <p>{p.services}</p>
+                    </div>
+                  </a>
+                </li>
+              ))}
               <div className="stripe last animate"></div>
             </ul>
           </div>
@@ -242,126 +178,38 @@ export default function Home() {
         <section className="section work-tiles work-tiles-home">
           <div className="container">
             <ul>
-              <li className="visible">
-                <div className="single-tile-wrap">
-                  <a href="https://github.com/Aadarshrai1801/BazaarPulse" target="_blank" rel="noopener noreferrer" className="row">
-                    <div className="flex-col">
-                      <div className="tile-image">
-                        <div
-                          className="overlay overlay-image"
-                          style={{
-                            backgroundImage: 'url(/assets/work-marketpulse.svg)',
-                            backgroundColor: '#0B1220',
-                            backgroundPosition: 'center center',
-                            backgroundRepeat: 'no-repeat',
-                            backgroundSize: 'cover'
-                          }}
-                        ></div>
+              {PROJECTS.map((p) => (
+                <li key={p.id} className="visible">
+                  <div className="single-tile-wrap">
+                    <a href={p.link} target="_blank" rel="noopener noreferrer" className="row">
+                      <div className="flex-col">
+                        <div className="tile-image">
+                          <div
+                            className="overlay overlay-image"
+                            style={{
+                              backgroundImage: `url(${p.image})`,
+                              backgroundColor: p.bgColor,
+                              backgroundPosition: 'center center',
+                              backgroundRepeat: 'no-repeat',
+                              backgroundSize: 'cover'
+                            }}
+                          ></div>
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex-col">
-                      <h4><span>MarketPulse</span></h4>
-                      <div className="stripe"></div>
-                    </div>
-                    <div className="flex-col">
-                      <p>Supermarket price intelligence</p>
-                    </div>
-                    <div className="flex-col">
-                      <p>Python · MongoDB</p>
-                    </div>
-                  </a>
-                </div>
-              </li>
-              <li className="visible">
-                <div className="single-tile-wrap">
-                  <a href="https://github.com/Aadarshrai1801/Plantix" target="_blank" rel="noopener noreferrer" className="row">
-                    <div className="flex-col">
-                      <div className="tile-image">
-                        <div
-                          className="overlay overlay-image"
-                          style={{
-                            backgroundImage: 'url(/assets/work-plantix.svg)',
-                            backgroundColor: '#06281A',
-                            backgroundPosition: 'center center',
-                            backgroundRepeat: 'no-repeat',
-                            backgroundSize: 'cover'
-                          }}
-                        ></div>
+                      <div className="flex-col">
+                        <h4><span>{p.title}</span></h4>
+                        <div className="stripe"></div>
                       </div>
-                    </div>
-                    <div className="flex-col">
-                      <h4><span>Plantix</span></h4>
-                      <div className="stripe"></div>
-                    </div>
-                    <div className="flex-col">
-                      <p>Plant disease detection</p>
-                    </div>
-                    <div className="flex-col">
-                      <p>TensorFlow</p>
-                    </div>
-                  </a>
-                </div>
-              </li>
-              <li className="visible">
-                <div className="single-tile-wrap">
-                  <a href="https://github.com/Aadarshrai1801/Intellicast" target="_blank" rel="noopener noreferrer" className="row">
-                    <div className="flex-col">
-                      <div className="tile-image">
-                        <div
-                          className="overlay overlay-image"
-                          style={{
-                            backgroundImage: 'url(/assets/work-intellicast.svg)',
-                            backgroundColor: '#17102E',
-                            backgroundPosition: 'center center',
-                            backgroundRepeat: 'no-repeat',
-                            backgroundSize: 'cover'
-                          }}
-                        ></div>
+                      <div className="flex-col">
+                        <p>{p.sub}</p>
                       </div>
-                    </div>
-                    <div className="flex-col">
-                      <h4><span>IntelliCast</span></h4>
-                      <div className="stripe"></div>
-                    </div>
-                    <div className="flex-col">
-                      <p>Medical AI assistant</p>
-                    </div>
-                    <div className="flex-col">
-                      <p>Python · LLM</p>
-                    </div>
-                  </a>
-                </div>
-              </li>
-              <li className="visible">
-                <div className="single-tile-wrap">
-                  <a href="https://github.com/Aadarshrai1801/QuickShow" target="_blank" rel="noopener noreferrer" className="row">
-                    <div className="flex-col">
-                      <div className="tile-image">
-                        <div
-                          className="overlay overlay-image"
-                          style={{
-                            backgroundImage: 'url(/assets/work-quickshow.svg)',
-                            backgroundColor: '#2A0A12',
-                            backgroundPosition: 'center center',
-                            backgroundRepeat: 'no-repeat',
-                            backgroundSize: 'cover'
-                          }}
-                        ></div>
+                      <div className="flex-col">
+                        <p>{p.tags}</p>
                       </div>
-                    </div>
-                    <div className="flex-col">
-                      <h4><span>QuickShow</span></h4>
-                      <div className="stripe"></div>
-                    </div>
-                    <div className="flex-col">
-                      <p>Movie ticket booking</p>
-                    </div>
-                    <div className="flex-col">
-                      <p>React · Node.js</p>
-                    </div>
-                  </a>
-                </div>
-              </li>
+                    </a>
+                  </div>
+                </li>
+              ))}
             </ul>
           </div>
         </section>

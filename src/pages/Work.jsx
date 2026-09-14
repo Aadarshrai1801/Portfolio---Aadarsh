@@ -1,65 +1,11 @@
 import React, { useState } from 'react';
+import { PROJECTS } from '../data/projects';
 
 export default function Work() {
   const [filter, setFilter] = useState('all');
   const [viewMode, setViewMode] = useState('columns'); // 'columns' or 'rows'
 
-  const projects = [
-    {
-      id: 'marketpulse',
-      title: 'MarketPulse',
-      category: ['development', 'design', 'interaction'],
-      location: 'Dubai, UAE',
-      services: 'Data Engineering & AI',
-      year: '2026',
-      sub: 'Supermarket price intelligence',
-      tags: 'Python · MongoDB',
-      link: 'https://github.com/Aadarshrai1801/BazaarPulse',
-      svg: '/assets/work-marketpulse.svg',
-      bgColor: '#0B1220'
-    },
-    {
-      id: 'plantix',
-      title: 'Plantix',
-      category: ['development', 'interaction'],
-      location: 'India',
-      services: 'Computer Vision & Deep Learning',
-      year: '2026',
-      sub: 'Plant disease detection',
-      tags: 'TensorFlow',
-      link: 'https://github.com/Aadarshrai1801/Plantix',
-      svg: '/assets/work-plantix.svg',
-      bgColor: '#06281A'
-    },
-    {
-      id: 'intellicast',
-      title: 'IntelliCast',
-      category: ['development', 'interaction'],
-      location: 'Dubai, UAE',
-      services: 'Medical AI & LLM RAG',
-      year: '2026',
-      sub: 'Medical AI assistant',
-      tags: 'Python · LLM',
-      link: 'https://github.com/Aadarshrai1801/Intellicast',
-      svg: '/assets/work-intellicast.svg',
-      bgColor: '#17102E'
-    },
-    {
-      id: 'quickshow',
-      title: 'QuickShow',
-      category: ['development', 'design'],
-      location: 'India',
-      services: 'Full-Stack Web App',
-      year: '2024',
-      sub: 'Movie ticket booking',
-      tags: 'React · Node.js',
-      link: 'https://github.com/Aadarshrai1801/QuickShow',
-      svg: '/assets/work-quickshow.svg',
-      bgColor: '#2A0A12'
-    }
-  ];
-
-  const filteredProjects = projects.filter((p) => {
+  const filteredProjects = PROJECTS.filter((p) => {
     if (filter === 'all') return true;
     return p.category.includes(filter);
   });
@@ -69,7 +15,7 @@ export default function Work() {
       <div className="mouse-pos-list-image no-select">
         <div className="mouse-pos-list-image-bounce overlay">
           <div className="float-image-wrap">
-            {projects.map((p, idx) => (
+            {PROJECTS.map((p, idx) => (
               <li key={p.id} className="mouse-pos-list-image-inner" data-project={p.id} data-index={idx}>
                 <div
                   className="overlay overlay-image"

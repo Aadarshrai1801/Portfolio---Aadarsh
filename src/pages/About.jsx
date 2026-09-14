@@ -66,7 +66,7 @@ export default function About() {
                 <div
                   className="overlay overlay-image"
                   style={{
-                    backgroundImage: 'url(/assets/hero.jpg)',
+                    backgroundImage: 'url(/assets/about-portrait.jpg)',
                     backgroundPosition: 'center center',
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: 'cover'
