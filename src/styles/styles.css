@@ -2732,6 +2732,19 @@ html.js body:not(.hero-reveal) .home-header .hero-scale {
    display: block;
    position: absolute;
    transform: translate(-50%, -50%);
+   z-index: 1;
+   pointer-events: none;
+}
+
+.home-header .personal-image-wrap .overlay-image {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-size: cover;
+   background-position: 55% bottom;
+   background-repeat: no-repeat;
 }
 
 .home-header .big-name {
@@ -2740,6 +2753,8 @@ html.js body:not(.hero-reveal) .home-header .hero-scale {
    left: 0;
    width: 100%;
    padding-bottom: calc(var(--gap-padding) * 1.25);
+   z-index: 4;
+   pointer-events: none;
 }
 
 .home-header .big-name .name-h1 {
@@ -2775,6 +2790,8 @@ html.js body:not(.hero-reveal) .home-header .hero-scale {
 .home-header .container {
    width: 100%;
    padding-bottom: 15vh;
+   position: relative;
+   z-index: 5;
 }
 
 .home-header .row {
@@ -2805,6 +2822,8 @@ html.js body:not(.hero-reveal) .home-header .hero-scale {
 
 .home-header .get-height {
    height: 100vh;
+   position: relative;
+   z-index: 5;
 }
 
 .home-header .hanger {

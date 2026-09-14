@@ -66,6 +66,17 @@ export default function Home() {
       <div className="main-wrap" id="home">
         <header className="section home-header theme-dark">
           <div className="hero-scale">
+            <div className="personal-image-wrap">
+              <div
+                className="overlay overlay-image"
+                style={{
+                  backgroundImage: 'url(/assets/hero-cutout.png)',
+                  backgroundPosition: '55% bottom',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundSize: 'cover'
+                }}
+              ></div>
+            </div>
             <div className="overlay get-height">
               <div className="hanger">
                 <p><span>Located </span><span>in </span><span>Dubai, UAE</span></p>
